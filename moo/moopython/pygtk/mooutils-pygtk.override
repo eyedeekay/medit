@@ -1,0 +1,414 @@
+/* kate: lang C; indent-width 4; space-indent on; strip on; */
+%%
+headers
+#include <Python.h>
+#define NO_IMPORT_PYGOBJECT
+#include "pygobject.h"
+#include "mooutils/moobigpaned.h"
+#include "mooutils/moocombo.h"
+#include "mooutils/moofiltermgr.h"
+#include "mooutils/moofilewatch.h"
+#include "mooutils/moohistorylist.h"
+#include "mooutils/moomenumgr.h"
+#include "mooutils/moouixml.h"
+#include "mooutils/moodialogs.h"
+#include "mooutils/mooutils-misc.h"
+#include "mooutils/moowindow.h"
+#include "mooutils/mooprefsdialog.h"
+#include "mooutils/moohistoryentry.h"
+#include "mooutils/mooprefs.h"
+#include "mooutils/moonotebook.h"
+#include "mooutils/mooentry.h"
+#include "mooutils/moostock.h"
+#include "mooutils/moouixml.h"
+#include "mooutils/moomenuaction.h"
+#include "moopython/moopython-utils.h"
+#include "moopython/pygtk/moo-pygtk.h"
+
+
+%%
+modulename _moo_utils
+%%
+import gtk.Window as PyGtkWindow_Type
+import gtk.Widget as PyGtkWidget_Type
+import gtk.Object as PyGtkObject_Type
+import gtk.ToggleButton as PyGtkToggleButton_Type
+import gtk.Button as PyGtkButton_Type
+import gtk.Dialog as PyGtkDialog_Type
+import gtk.VBox as PyGtkVBox_Type
+import gtk.TreeModel as PyGtkTreeModel_Type
+import gtk.FileChooser as PyGtkFileChooser_Type
+import gtk.Frame as PyGtkFrame_Type
+import gtk.Table as PyGtkTable_Type
+import gtk.Entry as PyGtkEntry_Type
+import gtk.Notebook as PyGtkNotebook_Type
+import gtk.Bin as PyGtkBin_Type
+import gobject.GObject as PyGObject_Type
+import gtk.gdk.Color as PyGdkColor_Type
+import gtk.gdk.Pixbuf as PyGdkPixbuf_Type
+%%
+ignore-glob
+  *_get_type
+%%
+override moo_window_class_add_action varargs
+static MooAction*
+py_action_factory_func (MooWindow  *window,
+                        PyObject   *func_n_args)
+{
+    PyObject *py_window, *args, *func, *result;
+    MooAction *action;
+
+    g_return_val_if_fail (func_n_args != NULL, NULL);
+    g_return_val_if_fail (PyTuple_Check (func_n_args), NULL);
+    g_return_val_if_fail (PyTuple_GET_SIZE (func_n_args) == 2, NULL);
+
+    func = PyTuple_GET_ITEM (func_n_args, 0);
+    args = PyTuple_GET_ITEM (func_n_args, 1);
+
+    g_return_val_if_fail (PyCallable_Check (func), NULL);
+    g_return_val_if_fail (PyTuple_Check (args), NULL);
+    g_return_val_if_fail (PyTuple_GET_SIZE (args) > 0, NULL);
+
+    py_window = pygobject_new (G_OBJECT (window));
+    PyTuple_SET_ITEM (args, 0, py_window);
+    result = PyObject_Call (func, args, NULL);
+    PyTuple_SET_ITEM (args, 0, NULL);
+    Py_DECREF (py_window);
+
+    if (!result)
+    {
+        PyErr_Print ();
+        return NULL;
+    }
+
+    if (!PyObject_TypeCheck (result, &PyMooAction_Type))
+    {
+        g_critical ("%s: got invalid value", G_STRLOC);
+        Py_DECREF (result);
+        return NULL;
+    }
+
+    action = MOO_ACTION (pygobject_get (result));
+    g_object_ref (action);
+    Py_DECREF (result);
+    return action;
+}
+
+static void
+destroy_func_n_args (PyObject *func_n_args)
+{
+    if (func_n_args)
+    {
+        PyTuple_SET_ITEM (PyTuple_GET_ITEM (func_n_args, 1), 0, Py_None);
+        Py_INCREF (Py_None);
+        Py_DECREF (func_n_args);
+    }
+}
+
+static PyObject *
+_wrap_moo_window_class_add_action (G_GNUC_UNUSED PyObject *self, PyObject *args)
+{
+    PyObject *py_type, *py_id, *py_factory_func, *func_n_args;
+    GType type;
+    MooWindowClass *klass;
+    int i, extra;
+
+    extra = PyTuple_GET_SIZE (args) - 3;
+
+    if (extra < 0)
+        return_TypeErr ("at least three arguments required");
+
+    py_type = PyTuple_GET_ITEM (args, 0);
+    py_id = PyTuple_GET_ITEM (args, 1);
+    py_factory_func = PyTuple_GET_ITEM (args, 2);
+
+    type = pyg_type_from_object (py_type);
+
+    if (!type)
+        return NULL;
+
+    if (!g_type_is_a (type, MOO_TYPE_WINDOW))
+        return_TypeErr ("type must be derived from MooWindow");
+
+    if (!PyString_Check (py_id))
+        return_TypeErr ("id must be a string");
+
+    if (!PyCallable_Check (py_factory_func))
+        return_TypeErr ("factory_func must be callable");
+
+    klass = g_type_class_ref (type);
+
+    func_n_args = PyTuple_New (2);
+    PyTuple_SET_ITEM (func_n_args, 0, py_factory_func);
+    Py_INCREF (py_factory_func);
+
+    PyTuple_SET_ITEM (func_n_args, 1, PyTuple_New (1 + extra));
+
+    for (i = 0; i < extra; ++i)
+    {
+        PyTuple_SET_ITEM (PyTuple_GET_ITEM (func_n_args, 1), i + 1,
+                          PyTuple_GET_ITEM (args, i + 3));
+        Py_INCREF (PyTuple_GET_ITEM (args, i + 3));
+    }
+
+    moo_window_class_new_action_custom (klass, PyString_AS_STRING (py_id),
+                                        (MooWindowActionFunc) py_action_factory_func,
+                                        func_n_args, (GDestroyNotify) destroy_func_n_args);
+
+    g_type_class_unref (klass);
+    return_None;
+}
+%%
+override moo_window_class_remove_action kwargs
+static PyObject *
+_wrap_moo_window_class_remove_action (G_GNUC_UNUSED PyObject *self, PyObject *args, PyObject *kwargs)
+{
+    static char *kwlist[] = {(char*) "class", (char*) "id", NULL};
+    PyObject *py_type;
+    GType type;
+    const char *action_id;
+    MooWindowClass *klass;
+
+    if (!PyArg_ParseTupleAndKeywords (args, kwargs, (char*) "Os:window_class_remove_action", kwlist, &py_type, &action_id))
+        return NULL;
+
+    type = pyg_type_from_object (py_type);
+
+    if (!type)
+        return NULL;
+
+    if (!g_type_is_a (type, MOO_TYPE_WINDOW))
+        return_TypeErr ("type must be derived from MooWindow");
+
+    klass = g_type_class_ref (type);
+    moo_window_class_remove_action (klass, action_id);
+    g_type_class_unref (klass);
+
+    return_None;
+}
+%%
+override moo_closure_new varargs
+typedef struct {
+    MooClosure parent;
+    PyObject *func;
+    PyObject *args;
+} MooPyClosure;
+
+static void
+moo_py_closure_call (MooClosure *closure)
+{
+    MooPyClosure *cl = (MooPyClosure*) closure;
+    PyObject *ret;
+
+    ret = PyObject_CallObject (cl->func, cl->args);
+
+    if (!ret)
+        PyErr_Print ();
+
+    Py_XDECREF (ret);
+}
+
+static void
+moo_py_closure_destroy (MooClosure *closure)
+{
+    MooPyClosure *cl = (MooPyClosure*) closure;
+    PyObject *tmp1 = cl->func;
+    PyObject *tmp2 = cl->args;
+    cl->func = NULL;
+    cl->args = NULL;
+    Py_XDECREF (tmp1);
+    Py_XDECREF (tmp2);
+}
+
+static PyObject *
+_wrap_moo_closure_new (G_GNUC_UNUSED PyObject *self, PyObject *args)
+{
+    PyObject *py_func, *cl_args = NULL;
+    MooPyClosure *closure;
+
+    if (!args)
+        return_TypeErr ("function argument required");
+
+    py_func = PyTuple_GET_ITEM (args, 0);
+
+    if (!PyCallable_Check (py_func))
+        return_TypeErr ("function must be callable");
+
+    if (PyTuple_GET_SIZE (args) > 1)
+    {
+        cl_args = PyTuple_GetSlice (args, 1, PyTuple_GET_SIZE (args));
+
+        if (!cl_args)
+            return NULL;
+    }
+
+    closure = moo_closure_new (MooPyClosure,
+                               moo_py_closure_call,
+                               moo_py_closure_destroy);
+
+    closure->func = py_func;
+    Py_INCREF (closure->func);
+    closure->args = cl_args;
+
+    moo_closure_ref ((MooClosure*) closure);
+    moo_closure_sink ((MooClosure*) closure);
+
+    return pyg_boxed_new (MOO_TYPE_CLOSURE, closure, FALSE, TRUE);
+}
+%%
+override moo_prefs_notify_connect varargs
+
+typedef struct {
+    PyObject *func;
+    PyObject *args;
+} PrefsClosure;
+
+#define prefs_closure_new() g_new0 (PrefsClosure, 1)
+
+static void
+prefs_closure_free (PrefsClosure *closure)
+{
+    if (closure)
+    {
+        Py_XDECREF (closure->func);
+        Py_XDECREF (closure->args);
+        g_free (closure);
+    }
+}
+
+static void
+prefs_notify (const char     *key,
+              const GValue   *newval,
+              PrefsClosure   *closure)
+{
+    PyObject *result, *args, *py_key, *py_newval;
+
+    if (newval)
+    {
+        py_newval = pyg_value_as_pyobject (newval, FALSE);
+
+        if (!py_newval)
+        {
+            PyErr_Print ();
+            return;
+        }
+    }
+    else
+    {
+        py_newval = Py_None;
+        Py_INCREF (py_newval);
+    }
+
+    py_key = PyString_FromString (key);
+    args = PyTuple_New (2 + (closure->args ? PyTuple_GET_SIZE (closure->args) : 0));
+
+    if (closure->args)
+    {
+        int i;
+
+        for (i = 0; i < PyTuple_GET_SIZE (closure->args); ++i)
+        {
+            PyTuple_SET_ITEM (args, i + 2, PyTuple_GET_ITEM (closure->args, i));
+            Py_INCREF (PyTuple_GET_ITEM (closure->args, i));
+        }
+    }
+
+    PyTuple_SET_ITEM (args, 0, py_key);
+    PyTuple_SET_ITEM (args, 1, py_newval);
+
+    result = PyObject_CallObject (closure->func, args);
+
+    Py_DECREF (args);
+
+    if (result)
+    {
+        Py_DECREF (result);
+    }
+    else
+    {
+        PyErr_Print ();
+    }
+}
+
+static PyObject *
+_wrap_moo_prefs_notify_connect (G_GNUC_UNUSED PyObject *self, PyObject *args)
+{
+    PyObject *py_func, *py_pattern, *py_match_type;
+    PyObject *func_args = NULL;
+    PrefsClosure *closure;
+    guint id;
+
+    if (!args)
+        return_TypeErr ("arguments required");
+
+    if (PyTuple_GET_SIZE (args) < 3)
+        return_TypeErr ("three arguments required");
+
+    py_pattern = PyTuple_GET_ITEM (args, 0);
+    py_match_type = PyTuple_GET_ITEM (args, 1);
+    py_func = PyTuple_GET_ITEM (args, 2);
+
+    if (!PyString_Check (py_pattern))
+        return_TypeErr ("pattern must be a string");
+
+    if (!PyInt_Check (py_match_type))
+        return_TypeErr ("match_type must be an integer");
+
+    if (!PyCallable_Check (py_func))
+        return_TypeErr ("function must be callable");
+
+    if (PyTuple_GET_SIZE (args) > 1)
+    {
+        func_args = PyTuple_GetSlice (args, 3, PyTuple_GET_SIZE (args));
+
+        if (!func_args)
+            return NULL;
+    }
+
+    closure = prefs_closure_new ();
+    closure->func = py_func;
+    Py_INCREF (closure->func);
+    closure->args = func_args;
+
+    id = moo_prefs_notify_connect (PyString_AS_STRING (py_pattern),
+                                   PyInt_AS_LONG (py_match_type),
+                                   (MooPrefsNotify) prefs_notify,
+                                   closure, (GDestroyNotify) prefs_closure_free);
+
+    if (!id)
+    {
+        prefs_closure_free (closure);
+        return_Int (0);
+    }
+    else
+    {
+        return_Int (id);
+    }
+}
+%%
+override moo_file_dialog_get_filenames noargs
+static PyObject *
+_wrap_moo_file_dialog_get_filenames (PyGObject *self)
+{
+    GSList *filenames;
+    guint n_files, i;
+    PyObject *ret;
+
+    filenames = moo_file_dialog_get_filenames (MOO_FILE_DIALOG (self->obj));
+
+    if (!filenames)
+        return_None;
+
+    n_files = g_slist_length (filenames);
+    ret = PyTuple_New (n_files);
+    g_return_val_if_fail (ret != NULL, NULL);
+
+    for (i = 0; i < n_files; ++i)
+    {
+        PyTuple_SET_ITEM (ret, i, PyString_FromString (filenames->data));
+        g_free (filenames->data);
+        filenames = g_slist_delete_link (filenames, filenames);
+    }
+
+    return ret;
+}
