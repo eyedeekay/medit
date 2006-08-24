@@ -1,0 +1,259 @@
+;; -*- Mode: scheme; strip on; -*-
+
+(define-object CommandContext
+  (in-module "Moo")
+  (parent "GObject")
+  (c-name "MooCommandContext")
+  (gtype-id "MOO_TYPE_COMMAND_CONTEXT")
+)
+
+(define-object CommandType
+  (in-module "Moo")
+  (parent "GObject")
+  (c-name "MooCommandType")
+  (gtype-id "MOO_TYPE_COMMAND_TYPE")
+  (fields
+    '("char*" "name")
+    '("char*" "display_name")
+  )
+)
+
+(define-object Command
+  (in-module "Moo")
+  (parent "GObject")
+  (c-name "MooCommand")
+  (gtype-id "MOO_TYPE_COMMAND")
+  (fields
+    '("MooCommandOptions" "options")
+  )
+)
+
+(define-boxed CommandData
+  (in-module "Moo")
+  (c-name "MooCommandData")
+  (gtype-id "MOO_TYPE_COMMAND_DATA")
+)
+
+(define-flags CommandOptions
+  (in-module "Moo")
+  (c-name "MooCommandOptions")
+  (gtype-id "MOO_TYPE_COMMAND_OPTIONS")
+)
+
+
+(define-function parse_command_options
+  (c-name "moo_command_options_parse")
+  (return-type "MooCommandOptions")
+  (parameters
+    '("const-char*" "string" (null-ok))
+  )
+)
+
+(define-function command_create
+  (c-name "moo_command_create")
+  (return-type "MooCommand*")
+  (parameters
+    '("const-char*" "type")
+    '("const-char*" "options")
+    '("MooCommandData*" "data")
+  )
+)
+
+(define-function command_type_register
+  (c-name "moo_command_type_register")
+  (return-type "none")
+  (parameters
+    '("const-char*" "name")
+    '("const-char*" "display_name")
+    '("MooCommandType*" "type")
+  )
+)
+
+(define-function command_type_lookup
+  (c-name "moo_command_type_lookup")
+  (return-type "MooCommandType*")
+  (parameters
+    '("const-char*" "name")
+  )
+)
+
+
+(define-virtual create_command
+  (of-object "MooCommandType")
+  (return-type "MooCommand*")
+  (parameters
+    '("MooCommandData*" "data")
+    '("const-char*" "options")
+  )
+)
+
+(define-virtual create_widget
+  (of-object "MooCommandType")
+  (return-type "GtkWidget*")
+)
+
+(define-virtual load_data
+  (of-object "MooCommandType")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "widget")
+    '("MooCommandData*" "data")
+  )
+)
+
+(define-virtual save_data
+  (of-object "MooCommandType")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "widget")
+    '("MooCommandData*" "data")
+  )
+)
+
+
+(define-method run
+  (of-object "MooCommand")
+  (c-name "moo_command_run")
+  (return-type "none")
+  (parameters
+    '("MooCommandContext*" "ctx")
+  )
+)
+
+(define-virtual run
+  (of-object "MooCommand")
+  (return-type "none")
+  (parameters
+    '("MooCommandContext*" "ctx")
+  )
+)
+
+(define-method set_options
+  (of-object "MooCommand")
+  (c-name "moo_command_set_options")
+  (return-type "none")
+  (parameters
+    '("MooCommandOptions" "options")
+  )
+)
+
+(define-method get_options
+  (of-object "MooCommand")
+  (c-name "moo_command_get_options")
+  (return-type "MooCommandOptions")
+)
+
+
+(define-function moo_command_context_new
+  (c-name "moo_command_context_new")
+  (is-constructor-of "MooCommandContext")
+  (return-type "MooCommandContext*")
+  (properties
+    '("doc" (optional))
+    '("window" (optional))
+  )
+)
+
+(define-method set_doc
+  (of-object "MooCommandContext")
+  (c-name "moo_command_context_set_doc")
+  (return-type "none")
+  (parameters
+    '("GtkTextView*" "doc" (null-ok))
+  )
+)
+
+(define-method get_doc
+  (of-object "MooCommandContext")
+  (c-name "moo_command_context_get_doc")
+  (return-type "GtkTextView*")
+)
+
+(define-method set_window
+  (of-object "MooCommandContext")
+  (c-name "moo_command_context_set_window")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "window" (null-ok))
+  )
+)
+
+(define-method get_window
+  (of-object "MooCommandContext")
+  (c-name "moo_command_context_get_window")
+  (return-type "GtkWindow*")
+)
+
+(define-method set
+  (of-object "MooCommandContext")
+  (c-name "moo_command_context_set")
+  (return-type "none")
+  (parameters
+    '("const-char*" "name")
+    '("const-GValue*" "value")
+  )
+)
+
+(define-method get
+  (of-object "MooCommandContext")
+  (c-name "moo_command_context_get")
+  (return-type "gboolean")
+  (parameters
+    '("const-char*" "name")
+    '("GValue*" "value")
+  )
+)
+
+(define-method unset
+  (of-object "MooCommandContext")
+  (c-name "moo_command_context_unset")
+  (return-type "none")
+  (parameters
+    '("const-char*" "name")
+  )
+)
+
+(define-method foreach
+  (of-object "MooCommandContext")
+  (c-name "moo_command_context_foreach")
+  (return-type "none")
+  (parameters
+    '("MooCommandContextForeachFunc" "func")
+    '("gpointer" "data")
+  )
+)
+
+
+(define-function moo_command_data_new
+  (c-name "moo_command_data_new")
+  (is-constructor-of "MooCommandData")
+  (return-type "MooCommandData*")
+)
+
+(define-method set
+  (of-object "MooCommandData")
+  (c-name "moo_command_data_set")
+  (return-type "none")
+  (parameters
+    '("const-char*" "key")
+    '("const-char*" "value")
+  )
+)
+
+(define-method get
+  (of-object "MooCommandData")
+  (c-name "moo_command_data_get")
+  (return-type "const-char*")
+  (parameters
+    '("const-char*" "key")
+  )
+)
+
+(define-method unset
+  (of-object "MooCommandData")
+  (c-name "moo_command_data_unset")
+  (return-type "none")
+  (parameters
+    '("const-char*" "key")
+  )
+)
