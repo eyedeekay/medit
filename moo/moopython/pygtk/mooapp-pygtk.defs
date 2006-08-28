@@ -1,0 +1,149 @@
+;; -*- Mode: scheme; strip on; -*-
+;; hand-edited
+
+(define-object App
+  (in-module "Moo")
+  (parent "GObject")
+  (c-name "MooApp")
+  (gtype-id "MOO_TYPE_APP")
+)
+
+
+;; (define-boxed AppInfo
+;;   (in-module "Moo")
+;;   (c-name "MooAppInfo")
+;;   (gtype-id "MOO_TYPE_APP_INFO")
+;;   (fields
+;;     '("char*" "short_name")
+;;     '("char*" "full_name")
+;;     '("char*" "description")
+;;     '("char*" "version")
+;;     '("char*" "website")
+;;     '("char*" "website_label")
+;;     '("char*" "app_dir")
+;;     '("char*" "rc_file")
+;;   )
+;; )
+
+;; From mooapp.h
+
+(define-function get_instance
+  (c-name "moo_app_get_instance")
+  (return-type "MooApp*")
+)
+
+(define-method init
+  (of-object "MooApp")
+  (c-name "moo_app_init")
+  (return-type "gboolean")
+)
+
+(define-method run
+  (of-object "MooApp")
+  (c-name "moo_app_run")
+  (return-type "int")
+)
+
+(define-method quit
+  (of-object "MooApp")
+  (c-name "moo_app_quit")
+  (return-type "gboolean")
+)
+
+(define-method set_exit_code
+  (of-object "MooApp")
+  (c-name "moo_app_set_exit_code")
+  (return-type "none")
+  (parameters
+    '("int" "code")
+  )
+)
+
+;; (define-method get_info
+;;   (of-object "MooApp")
+;;   (c-name "moo_app_get_info")
+;;   (return-type "const-MooAppInfo*")
+;; )
+
+(define-method get_rc_file_name
+  (of-object "MooApp")
+  (c-name "moo_app_get_rc_file_name")
+  (return-type "const-char*")
+)
+
+(define-method get_input_pipe_name
+  (of-object "MooApp")
+  (c-name "moo_app_get_input_pipe_name")
+  (return-type "const-char*")
+)
+
+(define-method get_editor
+  (of-object "MooApp")
+  (c-name "moo_app_get_editor")
+  (return-type "MooEditor*")
+)
+
+(define-function prefs_dialog
+  (c-name "moo_app_prefs_dialog")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "parent")
+  )
+)
+
+(define-function about_dialog
+  (c-name "moo_app_about_dialog")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "parent")
+  )
+)
+
+(define-method get_ui_xml
+  (of-object "MooApp")
+  (c-name "moo_app_get_ui_xml")
+  (return-type "MooUIXML*")
+)
+
+(define-method set_ui_xml
+  (of-object "MooApp")
+  (c-name "moo_app_set_ui_xml")
+  (return-type "none")
+  (parameters
+    '("MooUIXML*" "xml")
+  )
+)
+
+(define-method tempnam
+  (of-object "MooApp")
+  (c-name "moo_app_tempnam")
+  (return-type "char*")
+)
+
+(define-method create_user_data_dir
+  (of-object "MooApp")
+  (c-name "moo_app_create_user_data_dir")
+  (return-type "char*")
+)
+
+(define-method send_msg
+  (of-object "MooApp")
+  (c-name "moo_app_send_msg")
+  (return-type "gboolean")
+  (parameters
+    '("const-char*" "pid" (null-ok))
+    '("const-char*" "data")
+    '("int" "len")
+  )
+)
+
+(define-method send_files
+  (of-object "MooApp")
+  (c-name "moo_app_send_files")
+  (return-type "gboolean")
+  (parameters
+    '("strv" "files")
+    '("guint32" "stamp" (default "0"))
+    '("const-char*" "pid" (null-ok) (default "NULL"))
+  )
+)

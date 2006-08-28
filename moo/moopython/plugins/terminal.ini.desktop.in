@@ -1,0 +1,11 @@
+[module]
+type=Python
+file=terminal.py
+version=0.7
+
+[plugin]
+id=Terminal
+_name=Terminal
+_description=Terminal plugin
+author=Yevgen Muntyan <muntyan@math.tamu.edu>
+version=3.1415926
