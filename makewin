@@ -1,0 +1,119 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import getopt
+
+dir = os.getcwd()
+builddir = dir
+moo_windir = "/usr/local/win/medit"
+strip = "i586-mingw32msvc-strip"
+do_strip = True
+bin_only = False
+installer = None
+
+def usage():
+    print "Usage:", sys.argv[0], "[--no-strip] [--bin-only] [build_dir] [gtk-runtime]"
+    sys.exit(2)
+
+try:
+    opts, args = getopt.getopt(sys.argv[1:], "", ["no-strip", "bin-only"])
+except getopt.GetoptError:
+    usage()
+
+for o, a in opts:
+    if o == "--no-strip":
+        do_strip = False
+    if o == "--bin-only":
+        bin_only = True
+if args[2:]:
+    usage()
+if args:
+    moo_builddir = os.path.abspath(args[0])
+else:
+    moo_builddir = builddir
+if args[1:]:
+    runtime = os.path.abspath(args[1])
+else:
+    runtime = None
+
+installdir = dir + "/inst_"
+
+issdir = "Z:%s/wininstaller" % (moo_builddir,)
+iss = issdir + "/medit.iss"
+
+
+class Error(Exception):
+    def __init__(self, status):
+        Exception.__init__(self)
+        self.status = status
+
+def do_cmd(cmd):
+    print cmd
+    status = os.system(cmd)
+    if status:
+        raise Error(status)
+
+def copy_files():
+    if runtime is not None:
+        do_cmd("cp -r %s/* %s/" % (runtime, moo_windir))
+
+    do_cmd("mkdir -p %s/bin" % (moo_windir,))
+    do_cmd("cp -r %s/usr/local/bin/medit.exe %s/bin/" % (installdir, moo_windir))
+    do_cmd("cp -r %s/usr/local/bin/libmoo.dll %s/bin/" % (installdir, moo_windir))
+
+    if not bin_only:
+        do_cmd("mkdir -p %s/share" % (moo_windir,))
+        do_cmd("mkdir -p %s/lib/moo" % (moo_windir,))
+
+        do_cmd("cp -r %s/usr/local/share/moo %s/share/" % (installdir, moo_windir))
+
+        do_cmd("cp -r %s/usr/local/lib/moo/plugins %s/lib/moo/" % (installdir, moo_windir))
+        do_cmd("cp -r %s/usr/local/lib/moo/projects %s/lib/moo/" % (installdir, moo_windir))
+
+        do_cmd("mkdir -p %s/lib/moo/plugins/pymoo25 %s/lib/moo/plugins/pymoo24" % (moo_windir, moo_windir))
+        do_cmd("cp %s/usr/local/lib/pymoo25.dll %s/lib/moo/plugins/pymoo25/pymoo.dll" % (installdir, moo_windir))
+        do_cmd("cp %s/usr/local/lib/moo25.dll %s/lib/moo/plugins/pymoo25/moo.pyd" % (installdir, moo_windir))
+        do_cmd("cp %s/usr/local/lib/pymoo24.dll %s/lib/moo/plugins/pymoo24/pymoo.dll" % (installdir, moo_windir))
+        do_cmd("cp %s/usr/local/lib/moo24.dll %s/lib/moo/plugins/pymoo24/moo.pyd" % (installdir, moo_windir))
+
+    if do_strip:
+        if not bin_only:
+            do_cmd("%s %s/lib/moo/plugins/*/*.dll" % (strip, moo_windir))
+        do_cmd("%s %s/bin/medit.exe %s/bin/libmoo.dll" % (strip, moo_windir, moo_windir))
+
+def get_version():
+    sys.path.insert(0, moo_builddir)
+    import config
+    return config.version
+
+def build():
+    global installer
+
+    do_cmd("mkdir " + moo_windir)
+    do_cmd("mkdir " + installdir)
+    os.chdir(moo_builddir)
+    do_cmd("make install DESTDIR=" + installdir)
+    copy_files()
+    do_cmd("wine /usr/local/win/InnoSetup5/ISCC.exe " + iss)
+
+    if do_strip:
+        installer = "meditsetup-" + get_version() + ".exe"
+    else:
+        installer = "meditsetup-dbg-" + get_version() + ".exe"
+
+    do_cmd("mv %s/wininstaller/Output/setup.exe %s/%s" % (moo_builddir, dir, installer))
+
+def clean():
+    do_cmd("rm -rf %s %s %s" % (moo_windir, installdir,
+                                moo_builddir + "/wininstaller/Output"))
+
+try:
+    build()
+except Error, e:
+    clean()
+    sys.exit(e.status)
+
+clean()
+print "*** Success ***"
+print "Installer: ", installer

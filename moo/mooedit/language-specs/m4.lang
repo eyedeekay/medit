@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language id="m4" _name="m4" _section="Scripts" version="2.0">
+  <metadata>
+    <property name="mimetypes">application/x-m4</property>
+    <property name="globs">*.m4</property>
+    <property name="line-comment-start">#</property>
+  </metadata>
+
+  <styles>
+    <style id="m4-comment" name="m4-comment" map-to="def:comment"/>
+  </styles>
+
+  <definitions>
+    <context id="m4">
+      <include>
+        <context id="m4-comment" style-ref="m4-comment" end-at-line-end="true">
+          <start>dnl</start>
+          <include>
+            <context ref="def:line-comment:*"/>
+          </include>
+        </context>
+        <context ref="sh:sh:*"/>
+      </include>
+    </context>
+  </definitions>
+</language>

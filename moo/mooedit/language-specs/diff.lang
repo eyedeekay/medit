@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language id="diff" _name="Diff" version="2.0" _section="Others">
+  <metadata>
+    <property name="mimetypes">text/x-diff;text/x-patch</property>
+    <property name="globs">*.diff;*.patch</property>
+  </metadata>
+
+  <styles>
+    <style id="added-line"    _name="Added line"/> <!--Others 2-->
+    <style id="removed-line"  _name="Removed line"/> <!--Others 3-->
+    <style id="changed-line"  _name="Changed line"/> <!--Preprocessor-->
+    <style id="special-case"  _name="Special case"/> <!--String-->
+    <style id="location"      _name="Location"/> <!--Keyword-->
+    <style id="comment"       _name="Comment" map-to="def:comment"/>
+    <style id="diff-file"     _name=""/> <!--Data Type-->
+  </styles>
+
+  <definitions>
+    <context id="diff">
+      <include>
+        <context id="diff-file" style-ref="diff-file" end-at-line-end="true">
+          <start>^(diff |\+\+\+ |Index: |==== |\*\*\* |--- )</start>
+          <include>
+            <context ref="def:escape"/>
+            <context ref="def:line-continue"/>
+          </include>
+        </context>
+
+        <context id="removed-line" style-ref="removed-line">
+          <match>^(&lt;|-).*$</match>
+        </context>
+
+        <context id="added-line" style-ref="added-line">
+          <match>^(\+|&gt;).*$</match>
+        </context>
+
+        <context id="changed-line" style-ref="changed-line">
+          <match>^\! .*$</match>
+        </context>
+
+        <context id="location" style-ref="location" end-at-line-end="true">
+          <start>^((@@)|[0-9]|\*\*\*\*)</start>
+          <include>
+            <context ref="def:escape"/>
+            <context ref="def:line-continue"/>
+          </include>
+        </context>
+
+        <context id="special-case" style-ref="special-case">
+          <prefix>^</prefix>
+          <suffix>\b</suffix>
+          <keyword>Only in .*</keyword>
+          <keyword>Files .* and .* are identical$</keyword>
+          <keyword>Files .* and .* differ$</keyword>
+          <keyword>Binary files .* and .* differ$</keyword>
+          <keyword>File .* is a .* while file .* is a .*</keyword>
+          <keyword>No newline at end of file .*</keyword>
+        </context>
+
+        <context id="line-comment" style-ref="comment" end-at-line-end="true">
+          <start>^#</start>
+          <include>
+            <context ref="def:line-continue"/>
+          </include>
+        </context>
+      </include>
+    </context>
+  </definitions>
+</language>
