@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case `basename $0` in
+    pot)
+        args="--gettext-package=moo -p"
+        ;;
+    dist)
+        args="--gettext-package=moo -d"
+        ;;
+    *)
+        args="-m"
+        ;;
+esac
+
+exec intltool-update $args $*
