@@ -1,0 +1,21 @@
+/* -%- lang: C; indent-width: 4; use-tabs: no; strip: yes -%- */
+%%
+headers
+#include <Python.h>
+#define NO_IMPORT_PYGOBJECT
+#include "pygobject.h"
+#include <moo.h>
+#include "moopython/moopython-utils.h"
+#include "moopython/pygtk/moo-pygtk.h"
+
+%%
+modulename moo.app
+%%
+import gtk.Window as PyGtkWindow_Type
+import gtk.Widget as PyGtkWidget_Type
+import gobject.GObject as PyGObject_Type
+import moo.utils.UIXML as PyMooUIXML_Type
+%%
+ignore-glob
+  *_get_type
+%%

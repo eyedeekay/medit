@@ -1,0 +1,171 @@
+<ui>
+
+<object name="Editor">
+
+  <widget name="Menubar">
+
+    <!-- menu item label -->
+    <item name="File" _label="_File">
+      <separator/>
+      <item action="NewDoc"/>
+      <item action="NewWindow"/>
+      <separator/>
+      <item action="Open"/>
+      <item action="OpenRecent"/>
+      <item action="Save"/>
+      <item action="SaveAs"/>
+      <separator/>
+      <item action="Reload"/>
+      <separator/>
+      <item action="PrintPdf"/>
+      <separator/>
+      <item action="PrintOptions"/>
+      <item action="PageSetup"/>
+      <item action="PrintPreview"/>
+      <item action="Print"/>
+      <separator/>
+      <placeholder name="UserMenu"/>
+      <separator/>
+      <item action="Close"/>
+      <item action="CloseAll"/>
+      <separator/>
+      <item action="Quit"/>
+      <separator/>
+    </item>
+
+    <!-- menu item label -->
+    <item name="Edit" _label="_Edit">
+      <separator/>
+      <item action="Undo"/>
+      <item action="Redo"/>
+      <separator/>
+      <item action="Cut"/>
+      <item action="Copy"/>
+      <item action="Paste"/>
+      <item action="Delete"/>
+      <separator/>
+      <item action="SelectAll"/>
+      <separator/>
+      <item action="Indent"/>
+      <item action="Unindent"/>
+      <separator/>
+      <item action="Comment"/>
+      <item action="Uncomment"/>
+      <separator/>
+      <placeholder name="UserMenu"/>
+      <separator/>
+    </item>
+
+    <!-- menu item label -->
+    <item name="Search" _label="_Search">
+      <separator/>
+      <item action="Find"/>
+      <item action="FindNext"/>
+      <item action="FindPrevious"/>
+      <item action="Replace"/>
+      <separator/>
+      <item action="QuickSearch"/>
+      <item action="FindCurrent"/>
+      <item action="FindCurrentBack"/>
+      <separator/>
+      <item action="GoToLine"/>
+      <separator/>
+      <item action="NextPlaceholder"/>
+      <item action="PrevPlaceholder"/>
+      <separator/>
+      <placeholder name="UserMenu"/>
+      <separator/>
+    </item>
+
+    <!-- menu item label -->
+    <item name="View" _label="_View">
+      <separator/>
+      <item action="PreviousTab"/>
+      <item action="NextTab"/>
+      <separator/>
+      <item action="LanguageMenu"/>
+      <separator/>
+      <item action="DocumentSubmenu">
+        <item action="WrapText"/>
+        <item action="LineNumbers"/>
+      </item>
+      <separator/>
+      <item action="ToggleBookmark"/>
+      <item action="BookmarksMenu"/>
+      <separator/>
+      <item action="FocusDoc"/>
+      <separator/>
+      <placeholder name="UserMenu"/>
+      <separator/>
+    </item>
+
+    <item name="Tools" _label="_Tools">
+      <separator/>
+      <placeholder name="ToolsMenu"/>
+      <separator/>
+      <placeholder name="UserMenu"/>
+      <separator/>
+      <item action="StopJob"/>
+      <separator/>
+    </item>
+
+    <!-- menu item label -->
+    <item name="Settings" _label="_Settings">
+      <separator/>
+      <item action="ShowToolbar"/>
+      <item action="ToolbarStyle"/>
+      <separator/>
+      <item action="ConfigureShortcuts"/>
+      <separator/>
+      <item action="Preferences"/>
+      <separator/>
+    </item>
+
+    <!-- menu item label -->
+    <item name="Window" _label="_Window">
+      <separator/>
+      <item action="NoDocuments"/>
+      <placeholder name="DocList"/>
+      <separator/>
+    </item>
+
+    <!-- menu item label -->
+    <item name="Help" _label="_Help">
+      <separator/>
+      <item action="SystemInfo"/>
+      <item action="About"/>
+      <separator/>
+    </item>
+
+  </widget> <!-- Menubar -->
+
+  <widget name="Toolbar">
+    <separator/>
+    <item action="NewDoc"/>
+    <separator/>
+    <item action="Open"/>
+    <item action="Save"/>
+    <item action="SaveAs"/>
+    <separator/>
+    <item action="Undo"/>
+    <item action="Redo"/>
+    <separator/>
+    <item action="Cut"/>
+    <item action="Copy"/>
+    <item action="Paste"/>
+    <separator/>
+
+    <item action="Find"/>
+    <item action="Replace"/>
+
+    <separator/>
+    <placeholder name="BuildToolbar">
+      <item action="StopJob"/>
+    </placeholder>
+    <separator/>
+
+  </widget> <!-- Toolbar -->
+
+</object> <!-- Editor -->
+
+</ui>

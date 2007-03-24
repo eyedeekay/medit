@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language id="haskell" _name="Haskell" version="2.0" _section="Sources">
+  <metadata>
+    <property name="mimetypes">text/x-haskell</property>
+    <property name="globs">*.hs</property>
+  </metadata>
+
+  <styles>
+    <style id="comment" _name="Comment" map-to="def:comment"/>
+    <style id="floating-point" _name="Floating point" map-to="def:floating-point"/>
+    <style id="string" _name="String" map-to="def:string"/>
+    <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+    <style id="base-n-integer" _name="Base-N Integer" map-to="def:base-n-integer"/>
+    <style id="decimal" _name="Decimal" map-to="def:decimal"/>
+    <style id="data-type" _name="Data Type" map-to="def:data-type"/>
+    <style id="preprocessor" _name="Preprocessor" map-to="def:preprocessor"/>
+  </styles>
+
+  <definitions>
+    <context id="line-comment" style-ref="comment" end-at-line-end="true">
+      <start>--</start>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="block-comment" style-ref="comment">
+      <start>\{-</start>
+      <end>-\}</end>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="include-pragma" style-ref="preprocessor">
+      <start>\{-#</start>
+      <end>#-\}</end>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="type-or-constructor" style-ref="data-type">
+      <match>\b[A-Z][0-9a-zA-Z._]*('|#)*</match>
+    </context>
+    <context id="keysymbol" style-ref="keyword">
+      <match>::|-&gt;|&lt;-|=&gt;|=|\||\\|@|~</match>
+    </context>
+    <context id="string" style-ref="string">
+      <start>"</start>
+      <end>"</end>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="character-constant" style-ref="string">
+      <start>[^A-Za-z0-9]'</start>
+      <end>'</end>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="decimal" style-ref="decimal">
+      <match>\b[0-9]\b</match>
+    </context>
+    <context id="floating-point-number" style-ref="floating-point">
+      <match>\b([0-9]+.[0-9]+([eE][+-]?[0-9])?|[0-9][eE][+-]?[0-9])</match>
+    </context>
+    <context id="octal-number" style-ref="base-n-integer">
+      <match>\b[oO][0-7]+\b</match>
+    </context>
+    <context id="hex-number" style-ref="base-n-integer">
+      <match>\b0[xX][0-9a-fA-F]+\b</match>
+    </context>
+    <context id="keyword" style-ref="keyword">
+      <keyword>as</keyword>
+      <keyword>case</keyword>
+      <keyword>class</keyword>
+      <keyword>data</keyword>
+      <keyword>deriving</keyword>
+      <keyword>do</keyword>
+      <keyword>else</keyword>
+      <keyword>forall</keyword>
+      <keyword>hiding</keyword>
+      <keyword>if</keyword>
+      <keyword>import</keyword>
+      <keyword>in</keyword>
+      <keyword>infix</keyword>
+      <keyword>infixl</keyword>
+      <keyword>infixr</keyword>
+      <keyword>instance</keyword>
+      <keyword>let</keyword>
+      <keyword>module</keyword>
+      <keyword>newtype</keyword>
+      <keyword>of</keyword>
+      <keyword>qualified</keyword>
+      <keyword>then</keyword>
+      <keyword>where</keyword>
+      <keyword>with</keyword>
+    </context>
+    <context id="preprocessor-definition" style-ref="preprocessor">
+      <prefix>^[ \t]*#[ \t]*</prefix>
+      <suffix></suffix>
+      <keyword>if</keyword>
+      <keyword>ifdef</keyword>
+      <keyword>ifndef</keyword>
+      <keyword>else</keyword>
+      <keyword>elif</keyword>
+      <keyword>define</keyword>
+      <keyword>endif</keyword>
+      <keyword>undef</keyword>
+      <keyword>error</keyword>
+    </context>
+    <context id="haskell">
+      <include>
+        <context ref="line-comment"/>
+        <context ref="block-comment"/>
+        <context ref="include-pragma"/>
+        <context ref="type-or-constructor"/>
+        <context ref="keysymbol"/>
+        <context ref="string"/>
+        <context ref="character-constant"/>
+        <context ref="decimal"/>
+        <context ref="floating-point-number"/>
+        <context ref="octal-number"/>
+        <context ref="hex-number"/>
+        <context ref="keyword"/>
+        <context ref="preprocessor-definition"/>
+      </include>
+    </context>
+  </definitions>
+</language>

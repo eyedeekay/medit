@@ -1,0 +1,137 @@
+AM_CFLAGS =			\
+	-I$(top_builddir)	\
+	-I../moo		\
+	$(MOO_CFLAGS)		\
+	$(MOO_DEBUG_CFLAGS)
+
+noinst_PROGRAMS =
+test_programs =				\
+	markup testpaned miniglade	\
+	testobject testthreads
+
+if MOO_BUILD_EDIT
+test_programs +=			\
+	testtext testfileview		\
+	testpanedfileview testfold	\
+	testkeyfile
+if MOO_OS_UNIX
+test_programs += ms
+endif
+endif
+if MOO_BUILD_TERM
+test_programs += mterm termbuffer
+endif
+if MOO_BUILD_APP
+test_programs += testhtml
+endif
+
+EXTRA_PROGRAMS = $(test_programs)
+
+if MOO_ENABLE_TESTS
+noinst_PROGRAMS += $(test_programs)
+endif
+
+all-tests: $(EXTRA_PROGRAMS)
+
+EXTRA_DIST =		\
+	pyapp.py.in
+
+all-am: pyapp.py
+
+if MOO_BUILD_TERM
+if !MOO_OS_CYGWIN
+if !MOO_BUILD_APP
+noinst_PROGRAMS += mterm #termbuffer
+endif
+endif
+endif
+
+if MOO_BUILD_UTILS
+if !MOO_BUILD_EDIT
+if !MOO_BUILD_TERM
+if !MOO_OS_CYGWIN
+noinst_PROGRAMS += testfileview
+endif
+endif
+endif
+endif
+
+ldflags = -export-dynamic $(PYTHON_EXTRA_LDFLAGS)
+ldadd = ../moo/libmoo.la
+
+if MOO_OS_MINGW
+ldflags += -mwindows
+endif MOO_OS_MINGW
+
+
+testfold_LDFLAGS = $(ldflags)
+testfold_LDADD = $(ldadd)
+testfold_SOURCES = testfold.c
+
+
+testtext_LDFLAGS = $(ldflags)
+testtext_LDADD = $(ldadd)
+testtext_SOURCES = testtext.c
+
+
+testkeyfile_LDFLAGS = $(ldflags)
+testkeyfile_LDADD = $(ldadd)
+testkeyfile_SOURCES = testkeyfile.c
+
+testthreads_LDFLAGS = $(ldflags)
+testthreads_LDADD = $(ldadd) $(GTHREAD_LIBS)
+testthreads_SOURCES = testthreads.c
+
+ms_LDFLAGS = $(ldflags)
+ms_LDADD = $(ldadd) -lreadline
+ms_SOURCES = mscript.c
+
+testhtml_LDFLAGS = $(ldflags)
+testhtml_LDADD = $(ldadd)
+testhtml_SOURCES = testhtml.c
+
+
+mterm_LDFLAGS = $(ldflags)
+mterm_LDADD = $(ldadd)
+mterm_SOURCES = mterm.c
+
+termbuffer_LDFLAGS = $(ldflags)
+termbuffer_LDADD = $(ldadd)
+termbuffer_SOURCES = termbuffer.c
+
+
+##############################################################################
+##  markup
+##
+markup_LDFLAGS = $(ldflags)
+markup_LDADD = $(ldadd)
+
+markup_SOURCES = markup.c
+
+
+##############################################################################
+##  miniglade
+##
+miniglade_LDFLAGS = $(ldflags)
+miniglade_LDADD = $(ldadd)
+
+miniglade_SOURCES = miniglade.c
+
+
+##############################################################################
+
+testpaned_LDFLAGS = $(ldflags)
+testpaned_LDADD = $(ldadd)
+testpaned_SOURCES = testpaned.c
+
+testfileview_LDFLAGS = $(ldflags)
+testfileview_LDADD = $(ldadd)
+testfileview_SOURCES = testfileview.c
+
+testpanedfileview_LDFLAGS = $(ldflags)
+testpanedfileview_LDADD = $(ldadd)
+testpanedfileview_SOURCES = testpanedfileview.c
+
+testobject_LDFLAGS = $(ldflags)
+testobject_LDADD = $(ldadd)
+testobject_SOURCES = testobject.c

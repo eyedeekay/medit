@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language id="gettext-translation" _name="gettext translation" version="2.0" _section="Others">
+  <metadata>
+    <property name="mimetypes">text/x-po;text/x-pot;text/x-pox;text/x-gettext-translation</property>
+    <property name="globs">*.po;*.pot</property>
+    <property name="line-comment-start">#</property>
+  </metadata>
+
+  <styles>
+    <style id="comment" _name="Comment" map-to="def:comment"/>
+    <style id="location" _name="Location" map-to="def:comment"/>
+    <style id="string" _name="String" map-to="def:string"/>
+    <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+  </styles>
+
+  <definitions>
+    <context id="string" style-ref="string">
+      <start>"</start>
+      <end>"</end>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="format" style-ref="comment" end-at-line-end="true">
+      <start>^#,</start>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="location" style-ref="location" end-at-line-end="true">
+      <start>^#:</start>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="comment" style-ref="comment" end-at-line-end="true">
+      <start>^#$|^#[^:,\n]</start>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+    <context id="keyword" style-ref="keyword">
+      <prefix>^</prefix>
+      <keyword>domain</keyword>
+      <keyword>msgid</keyword>
+      <keyword>msgid_plural</keyword>
+      <keyword>msgstr</keyword>
+    </context>
+    <context id="gettext-translation">
+      <include>
+        <context ref="string"/>
+        <context ref="format"/>
+        <context ref="location"/>
+        <context ref="comment"/>
+        <context ref="keyword"/>
+      </include>
+    </context>
+  </definitions>
+</language>

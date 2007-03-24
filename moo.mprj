@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medit-project version="1.0" type="C" name="moo">
+ <active>debug</active>
+ <configurations>
+  <debug>
+   <build_dir>build/debug</build_dir>
+   <configure>
+    <args>--enable-debug=full --enable-all-warnings --enable-libmoo --with-mooterm --enable-libmoo-headers</args>
+    <vars>
+     <var name="CC">gcc-3.4</var>
+     <var name="CFLAGS">-g</var>
+    </vars>
+   </configure>
+  </debug>
+  <gtk-cvs>
+   <build_dir>/home/muntyan/projects/gtk/build/moo</build_dir>
+   <configure>
+    <args>--enable-debug --enable-all-warnings --prefix=$PREFIX --with-fam --with-mooterm --enable-libmoo</args>
+    <vars>
+     <var name="CFLAGS">-g</var>
+    </vars>
+   </configure>
+  </gtk-cvs>
+  <mingw>
+   <build_dir>build/mingw</build_dir>
+  </mingw>
+  <optimized>
+   <build_dir>build/optimized</build_dir>
+   <configure>
+    <args>--enable-all-warnings --enable-libmoo --without-system-pcre</args>
+    <vars>
+     <var name="CC">c99</var>
+     <var name="CFLAGS">-O6</var>
+    </vars>
+   </configure>
+  </optimized>
+ </configurations>
+ <file_selector_dir>/home/muntyan/projects/moo/moo/mooutils/</file_selector_dir>
+ <run>
+  <args>--g-fatal-warnings --new-app --mode=project</args>
+  <exe>medit/medit</exe>
+  <vars>
+   <var name="LANGUAGE">fr</var>
+  </vars>
+ </run>
+</medit-project>
