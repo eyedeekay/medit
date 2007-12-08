@@ -1,0 +1,44 @@
+# translation of tr.po to Turkish
+# Turkish translation of gtksourceview.
+# Copyright (C) 2003 gtksourceview's copyright holder
+# This file is distributed under the same license as the gtksourceview package.
+# Sami Onur Zaim <onurzaim@hotmail.com>, 2003.
+# Enver ALTIN <enver.altin@frontsite.com.tr>, 2004.
+# Baris Cicek <baris@teamforce.name.tr>, 2004, 2005.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-26 00:40-0600\n"
+"PO-Revision-Date: 2005-09-05 20:14+0300\n"
+"Last-Translator: Baris Cicek <baris@teamforce.name.tr>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms:  nplurals=1; plural=0;"
+
+msgid "Language specification directories"
+msgstr "Dil belirtimleri dizinleri"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Dil belirtimlerinin bulunduğu dosyaların bulunduğu dizinlerin listesi"
+
+msgid "Markup"
+msgstr "İşaretleme"
+
+msgid "Others"
+msgstr "Diğerleri"
+
+msgid "Scripts"
+msgstr "Betikler"
+
+msgid "Sources"
+msgstr "Kaynaklar"
+
+msgid "gettext translation"
+msgstr "gettext tercüme"
+

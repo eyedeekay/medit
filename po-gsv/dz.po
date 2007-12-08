@@ -1,0 +1,158 @@
+# Dzongkha translation of gtksourceview
+# Copyright @ 2006 Free Software Foundation, Inc.
+# Mindu Dorji
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview.gnome-2-14 dz\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-26 00:40-0600\n"
+"PO-Revision-Date: 2007-03-20 16:55+0530\n"
+"Last-Translator: sonam pelden <sonaa_peldn@yahoo.com>\n"
+"Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=(n!=1);\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: BHUTAN\n"
+"X-Poedit-SourceCharset: utf-8"
+
+msgid ".desktop"
+msgstr ".ཌེཀསི་ཊོཔ།"
+
+msgid ".ini"
+msgstr ".ཨའི་ཨེན་ཨའི།"
+
+msgid "Ada"
+msgstr "ཨ་ཌ།"
+
+msgid "C"
+msgstr "སི།"
+
+msgid "C#"
+msgstr "སི་#།"
+
+msgid "C++"
+msgstr "སི་++།"
+
+msgid "CSS"
+msgstr "སི་ཨེསི་ཨེསི།"
+
+msgid "ChangeLog"
+msgstr "བསྒྱུར་བཅོས་དྲན་དེབ།"
+
+msgid "D"
+msgstr "ཌི།"
+
+msgid "DTD"
+msgstr "ཌི་ཊི་ཌི།"
+
+msgid "Diff"
+msgstr "ཌིཕ"
+
+msgid "Fortran 95"
+msgstr "ཕོར་ཊཱེན་ ༩༥།"
+
+msgid "GtkRC"
+msgstr "ཇི་ཊི་ཀེ་ཨར་སི།"
+
+msgid "HTML"
+msgstr "ཨེཆ་ཊི་ཨེམ་ཨེལ།"
+
+msgid "Haskell"
+msgstr "ཧེསི་ཀེལ།"
+
+msgid "IDL"
+msgstr "ཨའི་ཌི་ཨེལ།"
+
+msgid "Java"
+msgstr "ཇ་བ།"
+
+msgid "LaTeX"
+msgstr "ལ་ཊེགསི།"
+
+msgid "Language specification directories"
+msgstr "སྐད་ཡིག་གསལ་བཤད་ཀྱི་ ཁ་བྱང་ཐོ་དེབ།"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "སྐད་ཡིག་གསལ་བཤད་ཡིག་སྣོད་(.སྐད་ཡིག་) ཚུ་ཡོད་སའི་ ཁ་བྱང་ཐོ་དེབ་ཀྱི་ཐོ་ཡིག"
+
+msgid "Lua"
+msgstr "ལུ་འ།"
+
+msgid "MSIL"
+msgstr "ཨེམ་ཨེསི་ཨའི་ཨེལ།"
+
+msgid "Makefile"
+msgstr "ཡིག་སྣོད་བཟོ།"
+
+msgid "Markup"
+msgstr "རྟགས་བཀོད།"
+
+msgid "Nemerle"
+msgstr "ནི་མར་ལི"
+
+msgid "Objective Caml"
+msgstr "དམིགས་ཡུལ་སི་ཨེ་ཨེམ་ཨེལ་"
+
+msgid "Octave"
+msgstr "བརྒྱད་ལྡན།"
+
+msgid "Others"
+msgstr "གཞན་ཚུ།"
+
+msgid "PHP"
+msgstr "པི་ཨེཆ་པི།"
+
+msgid "Pascal"
+msgstr "པཱསི་ཀལ།"
+
+msgid "Perl"
+msgstr "པརཱལ།"
+
+msgid "Python"
+msgstr "སྦུལམོ་ཆེ།"
+
+msgid "RPM spec"
+msgstr "ཨར་པི་ཨེམ་ཨེསི་པི་ཨི་སི་"
+
+msgid "Ruby"
+msgstr "ར་བི།"
+
+msgid "SQL"
+msgstr "ཨེསི་ཀིའུ་ཨེལ།"
+
+msgid "Scheme"
+msgstr "འཆར་ལས།"
+
+msgid "Scripts"
+msgstr "ཡིག་ཚུགས།"
+
+msgid "Sources"
+msgstr "འབྱུང་ཁུངས་ཚུ།"
+
+msgid "Tcl"
+msgstr "ཊི་སི་ཨེལ།"
+
+msgid "Texinfo"
+msgstr "ཚིག་དོན་གྱི་བརྡ་དོན།"
+
+msgid "VB.NET"
+msgstr "ཝི་བི་.ནེཊི།"
+
+msgid "VHDL"
+msgstr "ཝི་ཨེཆ་ཌི་ཨེལ།"
+
+msgid "Verilog"
+msgstr "བེ་རི་ལོག"
+
+msgid "XML"
+msgstr "ཨེགསི་ཨེམ་ཨེལ།"
+
+msgid "gettext translation"
+msgstr "ཚིག་ཡིག་ལེན་ནིའི་ སྐད་བསྐྱུར།"
+
+msgid "sh"
+msgstr "ཨེསི་ཨེཆ།"
+

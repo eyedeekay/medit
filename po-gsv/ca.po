@@ -1,0 +1,45 @@
+# Catalan translation of gtksourceview.
+# Copyright © 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtksourceview package.
+# Aleix Badia i Bosch <abadia@ica.es>, 2003, 2004.
+# Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2005, 2006, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-26 00:40-0600\n"
+"PO-Revision-Date: 2007-03-07 08:33+0100\n"
+"Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
+"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+msgid "Diff"
+msgstr "Diferències"
+
+msgid "Language specification directories"
+msgstr "Directoris d'especificació del llenguatge"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Llistat de directoris on hi ha els fitxers d'especificació del llenguatge (.lang)"
+
+msgid "Markup"
+msgstr "Marcatge"
+
+msgid "Others"
+msgstr "Altres"
+
+msgid "Scripts"
+msgstr "Seqüències"
+
+msgid "Sources"
+msgstr "Codis font"
+
+msgid "Style scheme search path"
+msgstr "lang)"
+
+msgid "gettext translation"
+msgstr "traducció del gettext"
+

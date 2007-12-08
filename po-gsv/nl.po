@@ -1,0 +1,41 @@
+# Gtksourceview Dutch translation.
+# Copyright (C) 2003 THE PACKAGE'S COPYRIGHT HOLDER
+#
+# This file is distributed under the same license as the PACKAGE package.
+# Jan-Willem Harmanny <jwharmanny@hotmail.com>, 2003.
+# Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004, 2005, 2006
+# Michiel Sikkes <michiels@gnome.org>, 2005.
+# Wouter Bolsterlee <uws+gnome@xs4all.nl>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-26 00:40-0600\n"
+"PO-Revision-Date: 2006-01-15 17:19+0100\n"
+"Last-Translator: Wouter Bolsterlee <uws+gnome@xs4all.nl>\n"
+"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+msgid "Language specification directories"
+msgstr "Taal specificatie mappen"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Een lijst van mappen waarin de taal specificatiebestanden (.lang) zich bevinden"
+
+msgid "Markup"
+msgstr "Markering"
+
+msgid "Others"
+msgstr "Andere"
+
+msgid "Sources"
+msgstr "Bronnen"
+
+msgid "Style scheme search path"
+msgstr "bevinden"
+
+msgid "gettext translation"
+msgstr "gettext-vertaling"
+

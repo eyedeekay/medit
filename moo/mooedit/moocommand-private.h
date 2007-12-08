@@ -1,0 +1,54 @@
+/*
+ *   moocommand-private.h
+ *
+ *   Copyright (C) 2004-2007 by Yevgen Muntyan <muntyan@math.tamu.edu>
+ *
+ *   This library is free software; you can redistribute it and/or
+ *   modify it under the terms of the GNU Lesser General Public
+ *   License version 2.1 as published by the Free Software Foundation.
+ *
+ *   See COPYING file that comes with this distribution.
+ */
+
+#ifndef MOOEDIT_COMPILATION
+#error "This file may not be used"
+#endif
+
+#ifndef MOO_COMMAND_PRIVATE_H
+#define MOO_COMMAND_PRIVATE_H
+
+#include <mooedit/mookeyfile.h>
+#include <mooedit/moocommand.h>
+
+G_BEGIN_DECLS
+
+
+void            _moo_command_init                   (void);
+MooCommandData *_moo_command_parse_item             (MooKeyFileItem     *item,
+                                                     const char         *name,
+                                                     const char         *filename,
+                                                     MooCommandFactory **factory,
+                                                     char              **options);
+void            _moo_command_format_item            (MooKeyFileItem     *item,
+                                                     MooCommandData     *data,
+                                                     MooCommandFactory  *factory,
+                                                     char               *options);
+MooCommandData *_moo_command_parse_file             (const char         *filename,
+                                                     MooCommandFactory **factory,
+                                                     char             ***params);
+
+GtkWidget      *_moo_command_factory_create_widget  (MooCommandFactory  *factory);
+void            _moo_command_factory_load_data      (MooCommandFactory  *factory,
+                                                     GtkWidget          *widget,
+                                                     MooCommandData     *data);
+gboolean        _moo_command_factory_save_data      (MooCommandFactory  *factory,
+                                                     GtkWidget          *widget,
+                                                     MooCommandData     *data);
+gboolean        _moo_command_factory_data_equal     (MooCommandFactory  *factory,
+                                                     MooCommandData     *data1,
+                                                     MooCommandData     *data2);
+
+
+G_END_DECLS
+
+#endif /* MOO_COMMAND_PRIVATE_H */

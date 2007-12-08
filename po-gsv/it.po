@@ -1,0 +1,40 @@
+# Italian translations for gtksourceview package.
+# Copyright (C) 2003 THE gtksourceview'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gtksourceview
+# package.
+# Stefano Canepa <sc@linux.it>, 2003, 2004, 2005, 2006.
+# Francesco Marletta <francesco.marletta@tiscali.it>, 2006, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-26 00:40-0600\n"
+"PO-Revision-Date: 2007-03-12 08:46+0100\n"
+"Last-Translator: Stefano Canepa <sc@linux.it>\n"
+"Language-Team: Italian <tp@lists.linux.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+msgid "Language specification directories"
+msgstr "Directory delle specifiche del linguaggio"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Elenco delle directory dove si trovano i file di specifica dei linguaggi (.lang)"
+
+msgid "Others"
+msgstr "Altri"
+
+msgid "Scripts"
+msgstr "Script"
+
+msgid "Sources"
+msgstr "Sorgenti"
+
+msgid "Style scheme search path"
+msgstr "lang)"
+
+msgid "gettext translation"
+msgstr "Traduzione gettext"
+

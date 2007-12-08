@@ -1,0 +1,48 @@
+# Slovenian translation of gtksourcereview.
+# Copyright (C) 2005-2006 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtksourcereview package.
+#
+# Matjaž Horvat <m@owca.info>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourcereview\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-26 00:40-0600\n"
+"PO-Revision-Date: 2006-09-13 01:27+0100\n"
+"Last-Translator: Matjaž Horvat <m@owca.info>\n"
+"Language-Team: Slovenian <SL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"X-Poedit-Language: Slovenian\n"
+"X-Poedit-Country: Slovenia"
+
+msgid "ChangeLog"
+msgstr "Dnevnik sprememb"
+
+msgid "Language specification directories"
+msgstr "Mape z določili jezikov"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Seznam map, v katerih se nahajajo datoteke (.lang) z določili jezikov"
+
+msgid "Markup"
+msgstr "Zaznamovalec"
+
+msgid "Others"
+msgstr "Drugo"
+
+msgid "Scheme"
+msgstr "Shema"
+
+msgid "Scripts"
+msgstr "Skripte"
+
+msgid "Sources"
+msgstr "Viri"
+
+msgid "gettext translation"
+msgstr "prevod gettext"
+

@@ -1,0 +1,42 @@
+# Indonesia translation of gtksourceview.
+# Copyright (C) 2004 THE gtksourceview'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gtksourceview package.
+# Ahmad Riza H Nst <ari@160c.afraid.org>, 2004.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-26 00:40-0600\n"
+"PO-Revision-Date: 2006-06-15 13:25+0700\n"
+"Last-Translator: Imam Musthaqim <musthaqim@telkom.net>\n"
+"Language-Team: Indonesia <kontak@id.gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+msgid "Language specification directories"
+msgstr "Direktori spesifikasi bahasa"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Daftar direktori tempat lokasi file spesifikasi bahasa (.lang)"
+
+msgid "Octave"
+msgstr "Oktaf"
+
+msgid "Others"
+msgstr "Lainnya"
+
+msgid "Scheme"
+msgstr "Skema"
+
+msgid "Scripts"
+msgstr "Script"
+
+msgid "Sources"
+msgstr "Sumber"
+
+msgid "gettext translation"
+msgstr "Terjemahan gettext"
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medit-project version="1.0" type="C" name="moo">
+ <active>debug</active>
+ <configurations>
+  <darwin>
+   <build_dir>build/darwin</build_dir>
+  </darwin>
+  <debug>
+   <build_dir>build/debug</build_dir>
+   <configure>
+    <args>--enable-debug=full --enable-all-warnings --enable-project</args>
+    <vars>
+     <var name="CFLAGS">-g</var>
+     <var name="OBJCFLAGS">-g</var>
+    </vars>
+   </configure>
+  </debug>
+  <gtk-2.6>
+   <build_dir>/home/muntyan/projects/gtk-2.6/moo</build_dir>
+  </gtk-2.6>
+  <gtk-cvs>
+   <build_dir>/home/muntyan/projects/gtk/build/moo</build_dir>
+   <configure>
+    <args>--enable-debug --enable-all-warnings --prefix=$PREFIX --with-fam --with-mooterm --enable-libmoo</args>
+    <vars>
+     <var name="CFLAGS">-g</var>
+    </vars>
+   </configure>
+  </gtk-cvs>
+  <mingw>
+   <build_dir>build/mingw</build_dir>
+  </mingw>
+  <optimized>
+   <build_dir>build/optimized</build_dir>
+   <configure>
+    <args>--enable-all-warnings</args>
+    <vars>
+     <var name="CFLAGS">-O2 -g</var>
+     <var name="OBJCFLAGS">-O2 -g</var>
+    </vars>
+   </configure>
+  </optimized>
+  <test>
+   <build_dir>build/test</build_dir>
+   <configure>
+    <args>--enable-debug=full --enable-all-warnings --prefix=/usr/local/test --disable-nls</args>
+    <vars>
+     <var name="CFLAGS">-g</var>
+     <var name="OBJCFLAGS">-g</var>
+    </vars>
+   </configure>
+  </test>
+ </configurations>
+ <run>
+  <args>--app-name foobar</args>
+  <exe>medit/medit</exe>
+  <vars>
+   <var name="LANGUAGE">ru</var>
+   <var name="MOO_DEBUG">misc,input</var>
+  </vars>
+ </run>
+</medit-project>
