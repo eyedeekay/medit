@@ -1,0 +1,42 @@
+# translation of or.po to Oriya
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Subhransu Behera <arya_subhransu@yahoo.co.in>, 2006.
+# Subhransu Behera <sbehera@redhat.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: or\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-01 10:57-0500\n"
+"PO-Revision-Date: 2006-09-03 16:38+0530\n"
+"Last-Translator: Subhransu Behera <sbehera@redhat.com>\n"
+"Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
+""
+
+msgid "Ada"
+msgstr "ଏ.ଡି.ଏ."
+
+msgid "Java"
+msgstr "ଜାଭା"
+
+msgid "Markup"
+msgstr "ଚିହ୍ନିତ ପାଠ୍ଯ"
+
+msgid "Others"
+msgstr "ଅନ୍ଯାନ୍ଯ"
+
+msgid "Ruby"
+msgstr "ରୁବି"
+
+msgid "Scheme"
+msgstr "ଯୋଜନା"
+
+msgid "Sources"
+msgstr "ଉତ୍ସ"
+

@@ -1,0 +1,7 @@
+build/
+junk/
+moo/mooedit/langs/
+moo/mooedit/gtksourceview/upstream/
+
+doc/txt2tags/txt2tags.py
+moo/mooutils/moofontsel.c

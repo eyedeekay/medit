@@ -1,0 +1,44 @@
+# Bengali India translation of gtksourceview.
+# Copyright (C) 2003, 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtksourceview package.
+# Sayamindu Dasgupta <unmadindu@bengalinux.org>, 2003.
+# Mahay Alam Khan <makl10n@yahoo.com>, 2005.
+# Samia Niamatullah <mailsamia2001@yahoo.com>, 2005.
+# Runa Bhattacharjee <runabh@gmail.com>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-01 10:57-0500\n"
+"PO-Revision-Date: 2007-03-13 17:50+0530\n"
+"Last-Translator: Runa Bhattacharjee <runabh@gmail.com>\n"
+"Language-Team: Bengali India\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+""
+
+msgid "Language specification directories"
+msgstr "ভাষা নির্ধারণে ব্যবহৃত ডিরেক্টরি"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "ভাষা স্পেসিফিকেশন ফাইল (.lang) যে ডিরেক্টরী সমূহতে আছে - তার তালিকা "
+
+msgid "Others"
+msgstr "অন্যান্য"
+
+msgid "Scheme"
+msgstr "স্কিম"
+
+msgid "Scripts"
+msgstr "স্ক্রিপ্ট"
+
+msgid "Sources"
+msgstr "সোর্স"
+
+msgid "gettext translation"
+msgstr "gettext অনুবাদ"
+

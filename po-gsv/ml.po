@@ -1,0 +1,48 @@
+# translation of gtksourceview.HEAD.ml.po to Malayalam
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# FSF-India <locale@gnu.org.in>, 2003.
+# Ani Peter <apeter@redhat.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview.HEAD.ml\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-01 10:57-0500\n"
+"PO-Revision-Date: 2006-09-04 14:57+0530\n"
+"Last-Translator: Ani Peter <apeter@redhat.com>\n"
+"Language-Team: Malayalam\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+""
+
+msgid "C"
+msgstr "സി"
+
+msgid "C++"
+msgstr "സി++"
+
+msgid "Fortran 95"
+msgstr "ഫോര്‍ട്രാന്‍ 95"
+
+msgid "Java"
+msgstr "ജാവാ"
+
+msgid "Markup"
+msgstr "കരുതല്"
+
+msgid "Others"
+msgstr "മറ്റുള്ളവ"
+
+msgid "Pascal"
+msgstr "പാസ്കല്‍"
+
+msgid "Perl"
+msgstr "പേള്‍"
+
+msgid "Python"
+msgstr "പൈതണ്‍"
+
