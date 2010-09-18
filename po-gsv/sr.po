@@ -1,0 +1,101 @@
+# Serbian translation of gtksourceview
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004, 2005, 2006.
+#
+# This file is distributed under the same license as the gtksourceview package.
+#
+# Maintainer: Данило Шеган <dsegan@gmx.net>
+# Reviewed on 2005-09-03 by: Данило Шеган <dsegan@gmx.net>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-01 10:57-0500\n"
+"PO-Revision-Date: 2006-01-31 01:59+0100\n"
+"Last-Translator: Слободан Д. Средојевић <slobo@akrep.be>\n"
+"Language-Team: Serbian (sr) <gnom@prevod.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+msgid "Ada"
+msgstr "Ада"
+
+msgid "ChangeLog"
+msgstr "Дневник промена"
+
+msgid "DTD"
+msgstr "ДТД"
+
+msgid "Diff"
+msgstr "Разлике (Diff)"
+
+msgid "Fortran 95"
+msgstr "Фортран 95"
+
+msgid "Haskell"
+msgstr "Хаскел"
+
+msgid "Java"
+msgstr "Јава"
+
+msgid "LaTeX"
+msgstr "ЛаТеХ"
+
+msgid "Language specification directories"
+msgstr "Директоријуми са дефиницијама језика"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Списак директоријума у којима се налазе датотеке са дефиницијама језика (.lang)"
+
+msgid "Lua"
+msgstr "Луа"
+
+msgid "Markup"
+msgstr "Означавање"
+
+msgid "Octave"
+msgstr "Октава"
+
+msgid "Others"
+msgstr "Остало"
+
+msgid "PHP"
+msgstr "ПХП"
+
+msgid "Pascal"
+msgstr "Паскал"
+
+msgid "Perl"
+msgstr "Перл"
+
+msgid "Python"
+msgstr "Питон"
+
+msgid "Ruby"
+msgstr "Руби"
+
+msgid "Scheme"
+msgstr "Схема"
+
+msgid "Scripts"
+msgstr "Скрипте"
+
+msgid "Sources"
+msgstr "Извори"
+
+msgid "Style scheme search path"
+msgstr "lang)"
+
+msgid "Texinfo"
+msgstr "Техинфо"
+
+msgid "VB.NET"
+msgstr "ВБ.НЕТ"
+
+msgid "Verilog"
+msgstr "Верилог"
+
+msgid "gettext translation"
+msgstr "геттекст превод"
+

@@ -1,0 +1,50 @@
+# translation of ro.po to Romanian
+# Romanian translation for gtksourceview
+# Copyright (c) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtksourceview package.
+# Cristian Vat <deathgeneral@gmail.com>, 2005.
+# Dan Damian <dand@gnome.ro>, 2005-2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-01 10:57-0500\n"
+"PO-Revision-Date: 2006-03-14 12:29+0200\n"
+"Last-Translator: Dan Damian <dand@gnome.ro>\n"
+"Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));"
+
+msgid "Language specification directories"
+msgstr "Directoare cu specificaţii de limbaj"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Lista directoarelor unde se află fişierele cu specificaţii de limbaje (.lang)"
+
+msgid "Makefile"
+msgstr "Fişier make"
+
+msgid "Markup"
+msgstr "Marcaj"
+
+msgid "Octave"
+msgstr "Octavă"
+
+msgid "Others"
+msgstr "Altele"
+
+msgid "Scheme"
+msgstr "Schemă"
+
+msgid "Scripts"
+msgstr "Script-uri"
+
+msgid "Sources"
+msgstr "Surse"
+
+msgid "gettext translation"
+msgstr "traducere gettext"
+

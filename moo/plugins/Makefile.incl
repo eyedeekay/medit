@@ -1,0 +1,32 @@
+AM_CPPFLAGS += -I$(srcdir)/plugins
+
+plugins_sources +=			\
+	plugins/moofileselector-prefs.c	\
+	plugins/moofileselector.c	\
+	plugins/moofileselector.h	\
+	plugins/mooeditplugins.h	\
+	plugins/mooeditplugins.c	\
+	plugins/moofilelist.c		\
+	plugins/moofind.c		\
+	plugins/moopython.c
+
+EXTRA_DIST +=						\
+	plugins/glade/moofileselector-prefs.glade	\
+	plugins/glade/moofileselector.glade		\
+	plugins/glade/moofind.glade			\
+	plugins/glade/moogrep.glade
+
+built_plugins_sources +=		\
+	moofileselector-prefs-gxml.h	\
+	moofileselector-gxml.h		\
+	moofind-gxml.h			\
+	moogrep-gxml.h
+
+EXTRA_DIST += plugins/moopython.py
+built_plugins_sources += plugins/moopython-py.h
+plugins/moopython-py.h: plugins/moopython.py $(top_srcdir)/tools/xml2h.py
+	$(MKDIR_P) plugins
+	$(PYTHON) $(top_srcdir)/tools/xml2h.py $< $@.tmp MOO_PYTHON_PY && mv $@.tmp $@
+
+include plugins/ctags/Makefile.incl
+include plugins/usertools/Makefile.incl

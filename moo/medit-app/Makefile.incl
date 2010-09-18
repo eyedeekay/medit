@@ -1,0 +1,83 @@
+bin_PROGRAMS = medit
+
+# if MOO_ENABLE_UNIT_TESTS
+# AM_CFLAGS += -DSRCDIR="${CMAKE_SOURCE_DIR}/medit")
+# endif
+
+medit_SOURCES =				\
+	medit-app/mem-debug.h		\
+	medit-app/run-tests.h		\
+	medit-app/parse.h		\
+	medit-app/main.c		\
+	$(moo_sources)			\
+	$(plugins_sources)
+
+nodist_EXTRA_medit_SOURCES =		\
+	dummy.cpp
+
+medit_LDADD = $(MOO_LIBS) $(moo_libadd)
+
+nodist_medit_SOURCES =			\
+	$(built_moo_sources)		\
+	$(built_plugins_sources)
+
+BUILT_SOURCES +=			\
+	$(built_moo_sources)		\
+	$(built_plugins_sources)
+
+CLEANFILES +=				\
+	$(built_moo_sources)		\
+	$(built_plugins_sources)
+
+medit_LDFLAGS =
+if MOO_OS_WIN32
+medit_LDFLAGS += -mwindows
+endif
+
+EXTRA_DIST += medit-app/medit.rc.in
+if MOO_OS_WIN32
+CLEANFILES += medit-app/medit.rc medit-app/medit.res
+medit-app/medit.rc: medit-app/medit.rc.in $(top_builddir)/config.status
+	$(MKDIR_P) medit-app
+	cd $(top_builddir) && ./config.status --file=moo/medit-app/medit.rc
+medit-app/medit.res: medit-app/medit.rc
+	$(WINDRES) -i medit-app/medit.rc --input-format=rc -o medit-app/medit.res -O coff
+medit_LDADD += medit-app/medit.res
+endif
+
+EXTRA_DIST += medit-app/medit.desktop.in
+if MOO_OS_UNIX
+desktopdir = $(datadir)/applications
+desktop_DATA = medit-app/medit.desktop
+medit-app/medit.desktop: medit-app/medit.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po)
+	$(MKDIR_P) medit-app
+	LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
+CLEANFILES += medit-app/medit.desktop
+endif MOO_OS_UNIX
+
+# MOO_WIN32_RESOURCE(medit.rc.in medit MEDIT_SOURCES medit_libs)
+
+# if !MOO_ENABLE_UNIT_TESTS
+# MEDIT_WIN32 = Win32
+# endif
+#   SET(MEDIT_WIN32 WIN32)
+# ENDIF(NOT MOO_ENABLE_UNIT_TESTS)
+
+# ADD_EXECUTABLE(medit ${MEDIT_WIN32} ${MEDIT_SOURCES})
+# TARGET_LINK_LIBRARIES(medit ${medit_libs} ${MOO_DEP_LIBS})
+# INSTALL(TARGETS medit DESTINATION ${BINDIR})
+
+# IF(MOO_ENABLE_PYTHON)
+#   ADD_DEPENDENCIES(medit python-plugins-ini)
+# ENDIF(MOO_ENABLE_PYTHON)
+
+# FIND_PACKAGE(MooDesktopFile)
+# MOO_INSTALL_DESKTOP_FILE(medit.desktop.in)
+#
+# IF(MOO_OS_UNIX)
+#   SET(PIXMAPS_DIR "${DATADIR}/pixmaps")
+#   SET(ICONTHEME_DIR "${DATADIR}/icons/hicolor/48x48/apps")
+#   SET(MEDIT_ICONS "${CMAKE_SOURCE_DIR}/moo/mooutils/pixmaps/medit.png")
+#   INSTALL(FILES ${MEDIT_ICONS} DESTINATION "${PIXMAPS_DIR}")
+#   INSTALL(FILES ${MEDIT_ICONS} DESTINATION "${ICONTHEME_DIR}")
+# ENDIF(MOO_OS_UNIX)

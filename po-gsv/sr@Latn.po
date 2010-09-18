@@ -1,0 +1,74 @@
+# Serbian translation of gtksourceview
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004, 2005, 2006.
+#
+# This file is distributed under the same license as the gtksourceview package.
+#
+# Maintainer: Danilo Šegan <dsegan@gmx.net>
+# Reviewed on 2005-09-03 by: Danilo Šegan <dsegan@gmx.net>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-01 10:57-0500\n"
+"PO-Revision-Date: 2006-01-31 01:59+0100\n"
+"Last-Translator: Slobodan D. Sredojević <slobo@akrep.be>\n"
+"Language-Team: Serbian (sr) <gnom@prevod.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+msgid "ChangeLog"
+msgstr "Dnevnik promena"
+
+msgid "Diff"
+msgstr "Razlike (Diff)"
+
+msgid "Haskell"
+msgstr "Haskel"
+
+msgid "LaTeX"
+msgstr "LaTeH"
+
+msgid "Language specification directories"
+msgstr "Direktorijumi sa definicijama jezika"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "Spisak direktorijuma u kojima se nalaze datoteke sa definicijama jezika (.lang)"
+
+msgid "Markup"
+msgstr "Označavanje"
+
+msgid "Octave"
+msgstr "Oktava"
+
+msgid "Others"
+msgstr "Ostalo"
+
+msgid "Pascal"
+msgstr "Paskal"
+
+msgid "Python"
+msgstr "Piton"
+
+msgid "Ruby"
+msgstr "Rubi"
+
+msgid "Scheme"
+msgstr "Shema"
+
+msgid "Scripts"
+msgstr "Skripte"
+
+msgid "Sources"
+msgstr "Izvori"
+
+msgid "Style scheme search path"
+msgstr "lang)"
+
+msgid "Texinfo"
+msgstr "Tehinfo"
+
+msgid "gettext translation"
+msgstr "gettekst prevod"
+

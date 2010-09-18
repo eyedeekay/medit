@@ -1,0 +1,73 @@
+# Bengali translation of gtksourceview.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtksourceview package.
+# Sayamindu Dasgupta <unmadindu@bengalinux.org>, 2003.
+# Mahay Alam Khan <makl10n@yahoo.com>, 2005.
+# Samia Niamatullah <mailsamia2001@yahoo.com>, 2005.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: GTKSourceView HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-01 10:57-0500\n"
+"PO-Revision-Date: 2005-10-01 00:37+0600\n"
+"Last-Translator: Mahay Alam Khan <makl10n@yahoo.com>\n"
+"Language-Team: Bengali <gnome-translation@bengalinux.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+msgid "Ada"
+msgstr "আডা"
+
+msgid "C"
+msgstr "সি"
+
+msgid "C#"
+msgstr "সি#"
+
+msgid "C++"
+msgstr "সি++"
+
+msgid "Diff"
+msgstr "ডিফ"
+
+msgid "LaTeX"
+msgstr "ল্যাটেক"
+
+msgid "Language specification directories"
+msgstr "ভাষা স্পেসিফিকেশন ডিরেক্টরী"
+
+msgid "List of directories where the language specification files (.lang) are located"
+msgstr "ভাষা স্পেসিফিকেশন ফাইল (.lang) যে ডিরেক্টরী সমূহতে আছে - তার তালিকা "
+
+msgid "Lua"
+msgstr "লুয়া"
+
+msgid "Makefile"
+msgstr "মেকফাইল"
+
+msgid "Markup"
+msgstr "মার্কআপ"
+
+msgid "Nemerle"
+msgstr "নম্বর"
+
+msgid "Others"
+msgstr "অন্যান্য"
+
+msgid "Python"
+msgstr "পাইথন"
+
+msgid "Ruby"
+msgstr "রুবি"
+
+msgid "Scripts"
+msgstr "স্ক্রিপ্ট"
+
+msgid "Sources"
+msgstr "সোর্স"
+
+msgid "gettext translation"
+msgstr "gettext অনুবাদ"
+
