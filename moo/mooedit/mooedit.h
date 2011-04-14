@@ -32,9 +32,6 @@ G_BEGIN_DECLS
 #define MOO_IS_EDIT_CLASS(klass)            (G_TYPE_CHECK_CLASS_TYPE ((klass), MOO_TYPE_EDIT))
 #define MOO_EDIT_GET_CLASS(obj)             (G_TYPE_INSTANCE_GET_CLASS ((obj), MOO_TYPE_EDIT, MooEditClass))
 
-#define MOO_EDIT_IS_MODIFIED(edit)  ((moo_edit_get_status (edit) & MOO_EDIT_STATUS_MODIFIED) != 0)
-#define MOO_EDIT_IS_CLEAN(edit)     ((moo_edit_get_status (edit) & MOO_EDIT_STATUS_CLEAN) != 0)
-
 typedef struct MooEditPrivate  MooEditPrivate;
 typedef struct MooEditClass    MooEditClass;
 
