@@ -516,12 +516,14 @@ _moo_editor_get_file_watch (MooEditor *editor)
 
 
 /**
- * moo_editor_create: (moo.lua 0)
+ * moo_editor_create_instance: (static-method-of MooEditor) (moo.lua 0)
+ *
+ * @embedded: (default TRUE):
  *
  * Returns: (transfer full)
  */
 MooEditor *
-moo_editor_create (gboolean embedded)
+moo_editor_create_instance (gboolean embedded)
 {
     if (!editor_instance)
     {
@@ -1774,7 +1776,7 @@ find_modified (MooEditArray *docs)
     guint i;
     MooEditArray *modified = moo_edit_array_new ();
     for (i = 0; i < docs->n_elms; ++i)
-        if (MOO_EDIT_IS_MODIFIED (docs->elms[i]) && !MOO_EDIT_IS_CLEAN (docs->elms[i]))
+        if (moo_edit_is_modified (docs->elms[i]) && !moo_edit_get_clean (docs->elms[i]))
             moo_edit_array_append (modified, docs->elms[i]);
     return modified;
 }
@@ -2231,6 +2233,53 @@ moo_editor_open_path (MooEditor     *editor,
     return ret;
 }
 
+/**
+ * moo_editor_create_doc: (moo.lua 0)
+ *
+ * @editor:
+ * @filename: (type const-filename) (allow-none) (default NULL)
+ * @encoding: (type const-utf8) (allow-none) (default NULL)
+ * @error:
+ *
+ * Create a document instance which can be embedded into arbitrary
+ * widget.
+ *
+ * This method may not be used in medit (use moo_editor_new_doc(),
+ * moo_editor_new_file(), moo_editor_open_file(), moo_editor_open_files(),
+ * moo_editor_open_uri(), moo_editor_open_path() instead).
+ */
+MooEdit *
+moo_editor_create_doc (MooEditor   *editor,
+                       const char  *filename,
+                       const char  *encoding,
+                       GError     **error)
+{
+    MooEdit *doc;
+    MooEditView *view;
+    GFile *file = NULL;
+
+    moo_return_error_if_fail_p (MOO_IS_EDITOR (editor));
+
+    if (filename)
+        file = g_file_new_for_path (filename);
+
+    doc = g_object_new (get_doc_type (editor), "editor", editor, (const char*) NULL);
+    view = moo_edit_get_view (doc);
+
+    if (file == NULL || _moo_edit_load_file (doc, file, encoding, NULL, error))
+    {
+        moo_editor_add_doc (editor, NULL, doc);
+    }
+    else
+    {
+        g_object_unref (doc);
+        doc = NULL;
+    }
+
+    moo_file_free (file);
+    return doc;
+}
+
 // MooEdit *
 // moo_editor_open_file (MooEditor      *editor,
 //                       MooEditWindow  *window,
@@ -2485,8 +2534,8 @@ moo_editor_reload (MooEditor     *editor,
     }
 
     if (!is_embedded (editor) &&
-        !MOO_EDIT_IS_CLEAN (doc) &&
-        MOO_EDIT_IS_MODIFIED (doc) &&
+        !moo_edit_get_clean (doc) &&
+        moo_edit_is_modified (doc) &&
         !_moo_edit_reload_modified_dialog (doc))
     {
         g_set_error (error,

@@ -14,6 +14,7 @@ gendocbook_files =				\
 	$(top_srcdir)/api/mpi/docbookwriter.py
 
 script_docbook_sources =			\
+	built/medit-defines.ent			\
 	built/script-python.docbook		\
 	built/script-lua.docbook		\
 	built/script-lua-gtk.docbook
@@ -146,5 +147,7 @@ uninstall-local:
 		$(DESTDIR)$(MOO_HELP_DIR)/img/*.png
 
 if MOO_OS_UNIX
+if MOO_BUILD_APP
 dist_man_MANS = built/medit.1
+endif MOO_BUILD_APP
 endif MOO_OS_UNIX
