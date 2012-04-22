@@ -1,0 +1,184 @@
+m4_define([_moo_major_version_],[1])
+m4_define([_moo_minor_version_],[1])
+m4_define([_moo_micro_version_],[0])
+m4_define([_moo_version_suffix_],[])
+m4_define([_moo_module_major_version_],[2])
+m4_define([_moo_module_minor_version_],[0])
+m4_define([_moo_version_],[_moo_major_version_._moo_minor_version_._moo_micro_version_])
+
+m4_if(_moo_version_suffix_,[],
+  [m4_define([_moo_display_version_],[_moo_version_])],
+  [m4_define([_moo_display_version_],[_moo_version_-_moo_version_suffix_])])
+
+m4_define([_moo_website_],[http://mooedit.sourceforge.net/])
+m4_define([_moo_web_contact_],[http://mooedit.sourceforge.net/contact.html])
+m4_define([_moo_email_],[emuntyan@users.sourceforge.net])
+m4_define([_moo_copyright_],[2004-2011 Yevgen Muntyan <_moo_email_>])
+
+AC_PREREQ([2.65])
+AC_INIT([medit], [_moo_display_version_], [_moo_email_])
+AC_GNU_SOURCE
+AC_CONFIG_MACRO_DIR([m4])
+AC_SUBST(ACLOCAL_FLAGS)
+
+AM_INIT_AUTOMAKE([1.11 foreign dist-bzip2 no-dist-gzip])
+AM_SILENT_RULES([yes])
+LT_INIT([disable-shared])
+# AC_PROG_RANLIB
+
+AC_SUBST(MOO_MAJOR_VERSION,_moo_major_version_)
+AC_SUBST(MOO_MINOR_VERSION,_moo_minor_version_)
+AC_SUBST(MOO_MICRO_VERSION,_moo_micro_version_)
+AC_SUBST(MOO_MODULE_MAJOR_VERSION,_moo_module_major_version_)
+AC_SUBST(MOO_MODULE_MINOR_VERSION,_moo_module_minor_version_)
+AC_SUBST(MOO_VERSION,_moo_version_)
+AC_SUBST(MOO_DISPLAY_VERSION,"_moo_display_version_")
+AC_SUBST(MOO_EMAIL,"_moo_email_")
+AC_SUBST(MOO_WEBSITE,"_moo_website_")
+AC_SUBST(MOO_WEB_CONTACT,"_moo_web_contact_")
+AC_SUBST(MOO_COPYRIGHT,"_moo_copyright_")
+
+# keep in sync with po/maintain
+AC_SUBST(MOO_PACKAGE_NAME,"medit-1")
+
+MOO_PREFS_XML_FILE_NAME="prefs.xml"
+MOO_STATE_XML_FILE_NAME="state.xml"
+MOO_NAMED_SESSION_XML_FILE_NAME="session-%s.xml"
+MOO_SESSION_XML_FILE_NAME="session.xml"
+
+AC_SUBST(GETTEXT_PACKAGE,$MOO_PACKAGE_NAME)
+AC_SUBST(GETTEXT_PACKAGE_GSV,"$MOO_PACKAGE_NAME-gsv")
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",[GETTEXT_PACKAGE])
+MOO_INTL
+
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_INSTALL
+AC_PROG_MKDIR_P
+AM_PROG_CC_C_O
+
+AC_ARG_VAR([WINDRES], [windres])
+AC_CHECK_TOOL(WINDRES, windres, :)
+
+AC_ARG_VAR([PYTHON], [Python executable, required to run build scripts])
+AC_CHECK_PROGS(PYTHON, python, [AC_MSG_ERROR([Python not found])])
+
+MOO_AC_FLAGS
+
+AM_MAINTAINER_MODE([enable])
+
+AC_CHECK_PROG([TXT2TAGS], txt2tags, txt2tags)
+if test x$MOO_DEV_MODE = "xyes" -a "x$TXT2TAGS" = "x"; then
+  AC_MSG_ERROR([txt2tags not found])
+fi
+
+AC_CONFIG_HEADERS([config.h])
+AH_TOP([#ifndef __CONFIG_H__
+#define __CONFIG_H__])
+AH_BOTTOM([#include <moo-config.h>
+#endif // __CONFIG_H__])
+
+MOO_LT_LIB_M
+
+AC_DEFINE_UNQUOTED(MOO_VERSION,["$MOO_VERSION"],[MOO_VERSION])
+AC_DEFINE_UNQUOTED(MOO_DISPLAY_VERSION,["$MOO_DISPLAY_VERSION"],[MOO_DISPLAY_VERSION])
+AC_DEFINE_UNQUOTED(MOO_MAJOR_VERSION,[$MOO_MAJOR_VERSION],[MOO_MAJOR_VERSION])
+AC_DEFINE_UNQUOTED(MOO_MICRO_VERSION,[$MOO_MICRO_VERSION],[MOO_MICRO_VERSION])
+AC_DEFINE_UNQUOTED(MOO_MINOR_VERSION,[$MOO_MINOR_VERSION],[MOO_MINOR_VERSION])
+AC_DEFINE_UNQUOTED(MOO_MODULE_MAJOR_VERSION,[$MOO_MODULE_MAJOR_VERSION],[MOO_MODULE_MAJOR_VERSION])
+AC_DEFINE_UNQUOTED(MOO_MODULE_MINOR_VERSION,[$MOO_MODULE_MINOR_VERSION],[MOO_MODULE_MINOR_VERSION])
+
+AC_DEFINE_UNQUOTED(MOO_EMAIL,["$MOO_EMAIL"],MOO_EMAIL)
+AC_DEFINE_UNQUOTED(PACKAGE_BUGREPORT,["$PACKAGE_BUGREPORT"],PACKAGE_BUGREPORT)
+AC_DEFINE_UNQUOTED(MOO_COPYRIGHT,["$MOO_COPYRIGHT"],MOO_COPYRIGHT)
+AC_DEFINE_UNQUOTED(MOO_WEBSITE,["$MOO_WEBSITE"],MOO_WEBSITE)
+AC_DEFINE_UNQUOTED(MOO_WEB_CONTACT,["$MOO_WEB_CONTACT"],MOO_WEB_CONTACT)
+
+MOO_AC_CHECK_OS
+MOO_AC_PYTHON
+
+MOO_BUILD_APP=true
+MOO_BUILD_MODULE=false
+AC_ARG_ENABLE(moo-module,
+  AC_HELP_STRING([--enable-moo-module],[build standalone python module instead of medit, default NO (you must also use --enable-shared with this option)]),[
+  if test "$enable_moo_module" = "yes"; then
+    MOO_BUILD_APP=false
+    MOO_BUILD_MODULE=true
+  fi
+])
+if $MOO_BUILD_MODULE; then
+  if ! $MOO_ENABLE_PYTHON; then
+    AC_MSG_ERROR([Python bindings are not enabled, can't build python module])
+  elif test "$enable_shared" != "yes"; then
+    AC_MSG_ERROR([Python module can't be built without --enable-shared option])
+  fi
+fi
+
+if $MOO_BUILD_APP; then
+  AC_DEFINE(MOO_BUILD_APP, 1, [build medit application])
+fi
+if $MOO_BUILD_MODULE; then
+  AC_DEFINE(MOO_BUILD_MODULE, 1, [build standalone python module])
+fi
+
+AM_CONDITIONAL(MOO_BUILD_APP, [$MOO_BUILD_APP])
+AM_CONDITIONAL(MOO_BUILD_MODULE, [$MOO_BUILD_MODULE])
+
+AC_SUBST(MOO_TOP_SRCDIR,`cd $srcdir && pwd`)
+if test x"$MOO_TOP_SRCDIR" = x"`pwd`"; then
+  AC_SUBST(MOO_CP_TO_SRCDIR,true)
+  AC_SUBST(MOO_MV_TO_SRCDIR,true)
+else
+  AC_SUBST(MOO_CP_TO_SRCDIR,cp)
+  AC_SUBST(MOO_MV_TO_SRCDIR,mv)
+fi
+
+AM_CONDITIONAL(MOO_BUILD_CTAGS, [$MOO_OS_UNIX])
+if $MOO_OS_UNIX; then
+  AC_DEFINE(MOO_BUILD_CTAGS, 1, [build ctags plugin])
+fi
+
+AC_ARG_ENABLE(coverage,
+  AC_HELP_STRING([--enable-coverage],[check test coverage]),[
+  MOO_ENABLE_COVERAGE="$enable_coverage"
+  ],[
+  MOO_ENABLE_COVERAGE="no"
+])
+AM_CONDITIONAL(MOO_ENABLE_COVERAGE, test "x$MOO_ENABLE_COVERAGE" = "xyes")
+if test "x$MOO_ENABLE_COVERAGE" = "xyes"; then
+  AC_DEFINE(MOO_ENABLE_COVERAGE, 1, [enable code coverage testing])
+fi
+
+if $MOO_OS_WIN32; then
+  AC_SUBST(MEDIT_WIN32_APP_UID,"7F9F899F-EE8A-47F0-9981-8C525AF78E4D")
+  AC_SUBST(MEDIT_INNO_TOP_SRCDIR,"Z:`cd $srcdir && pwd`")
+  AC_SUBST(MEDIT_INNO_TOP_BUILDDIR,"Z:`pwd`")
+  AC_SUBST(MEDIT_INNO_INSTDIR,"Z:`cd $prefix && pwd`")
+  AC_SUBST(MEDIT_INNO_COMPILER,'wine "c:\\program files\\inno setup 5\\ISCC.exe"')
+  AC_SUBST(MEDIT_INNO_INSTALLER_SUFFIX,"")
+  if test "x$MOO_DEBUG_ENABLED" = "xyes"; then
+    MEDIT_INNO_INSTALLER_SUFFIX="-debug"
+  fi
+fi
+
+AC_ARG_ENABLE(install-hooks,
+  AC_HELP_STRING([--enable-install-hooks],[run gtk-update-icon-cache during 'make install']),[
+  MOO_ENABLE_INSTALL_HOOKS="$enable_install_hooks"
+  ],[
+  if $MOO_BUILD_APP; then
+    MOO_ENABLE_INSTALL_HOOKS="yes"
+  else
+    MOO_ENABLE_INSTALL_HOOKS="no"
+  fi
+])
+AM_CONDITIONAL(MOO_ENABLE_INSTALL_HOOKS, test "x$MOO_ENABLE_INSTALL_HOOKS" = "xyes")
+
+AC_CONFIG_FILES([
+  Makefile
+  api/Makefile
+  doc/Makefile
+  moo/Makefile
+  po/Makefile
+  po-gsv/Makefile
+])
+AC_OUTPUT
