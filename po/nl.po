@@ -1,0 +1,2420 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Kris Van Bruwaene <krvbr@yahoo.co.uk>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: moo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-04 02:51-0800\n"
+"PO-Revision-Date: 2008-09-27\n"
+"Last-Translator: Kris Van Bruwaene <krvbr@yahoo.co.uk>\n"
+"Language-Team: Kris Van Bruwaene <krvbr@yahoo.co.uk>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. error message for wrong commmand line
+#: ../moo/medit-app/main.c:109
+#, c-format
+msgid "Invalid value '%s' for option %s"
+msgstr "Ongeldige waarde '%s' voor optie %s"
+
+#. help message for command line option --new-app
+#: ../moo/medit-app/main.c:116
+msgid "Run new instance of application"
+msgstr "Start nieuwe instantie van de toepassing"
+
+#. help message for command line option --use-session
+#: ../moo/medit-app/main.c:118
+msgid "Load and save session"
+msgstr "Sessie laden en opslaan"
+
+#. help message for command line option --pid=PID
+#: ../moo/medit-app/main.c:120
+msgid "Use existing instance with process id PID"
+msgstr "Gebruik bestaande instantie met proces-id PID"
+
+#. "PID" part in "--pid=PID"
+#: ../moo/medit-app/main.c:121
+msgid "PID"
+msgstr "PID"
+
+#. help message for command line option --app-name=NAME
+#: ../moo/medit-app/main.c:123
+msgid "Set instance name to NAME if it's not already running"
+msgstr "Stel instantienaam op NAAM tenzij ze al draait"
+
+#. "NAME" part in "--app-name=NAME"
+#: ../moo/medit-app/main.c:124
+msgid "NAME"
+msgstr "NAAM"
+
+#. help message for command line option --new-window
+#: ../moo/medit-app/main.c:126
+msgid "Open file(s) in a new window"
+msgstr "Open bestand(en) in nieuw venster"
+
+#. help message for command line option --new-tab
+#: ../moo/medit-app/main.c:128
+msgid "Open file(s) in a new tab"
+msgstr "Open bestand(en) in nieuw tabblad"
+
+#. help message for command line option --line=LINE
+#: ../moo/medit-app/main.c:134
+msgid "Open file and position cursor on line LINE"
+msgstr "Open bestand en plaats aanwijzer op lijn LIJN"
+
+#. "LINE" part in --line=LINE
+#: ../moo/medit-app/main.c:135
+msgid "LINE"
+msgstr "LIJN"
+
+#. help message for command line option --encoding=ENCODING
+#: ../moo/medit-app/main.c:137
+msgid "Use character encoding ENCODING"
+msgstr ""
+
+#. "ENCODING" part in --encoding=ENCODING
+#: ../moo/medit-app/main.c:138
+msgid "ENCODING"
+msgstr ""
+
+#. help message for command line option --reload
+#: ../moo/medit-app/main.c:140
+msgid "Automatically reload file if it was modified on disk"
+msgstr ""
+
+#. help message for command line option --geometry=WIDTHxHEIGHT[+X+Y]
+#: ../moo/medit-app/main.c:152
+msgid "Default window size and position"
+msgstr ""
+
+#. "WIDTHxHEIGHT[+X+Y]" part in --geometry=WIDTHxHEIGHT[+X+Y]
+#: ../moo/medit-app/main.c:153
+msgid "WIDTHxHEIGHT[+X+Y]"
+msgstr ""
+
+#. help message for command line option --version
+#: ../moo/medit-app/main.c:155
+msgid "Show version information and exit"
+msgstr "Toon versie-informatie en stop"
+
+#. "FILES" part in "medit [OPTION...] [FILES]"
+#: ../moo/medit-app/main.c:167
+msgid "FILES"
+msgstr "BESTANDEN"
+
+#. error message for wrong commmand line
+#: ../moo/medit-app/main.c:195
+#, c-format
+msgid "%s and %s options may not be used simultaneously\n"
+msgstr "opties %s en %s niet samen gebruiken\n"
+
+#: ../moo/medit-app/medit.desktop.in.h:1
+msgid "Text editor"
+msgstr "Teksteditor"
+
+#. Tab label in Credits dialog
+#: ../moo/mooapp/glade/mooappabout-credits.glade.h:2
+msgid "Thanks"
+msgstr "Dank"
+
+#. Tab label in Credits dialog
+#: ../moo/mooapp/glade/mooappabout-credits.glade.h:4
+msgid "Translated by"
+msgstr "Vertaald door"
+
+#. Tab label in Credits dialog
+#: ../moo/mooapp/glade/mooappabout-credits.glade.h:6
+msgid "Written by"
+msgstr "Geschreven door"
+
+#. Translators: do not translate the part before |
+#: ../moo/mooapp/glade/mooappabout-credits.glade.h:8
+msgctxt "yes"
+msgid "Dialog title|Credits"
+msgstr ""
+
+#. Credits button label in About dialog
+#: ../moo/mooapp/glade/mooappabout-dialog.glade.h:2
+msgctxt "yes"
+msgid "C_redits"
+msgstr ""
+
+#. Translators: do not translate the part before |
+#: ../moo/mooapp/glade/mooappabout-dialog.glade.h:4
+msgctxt "yes"
+msgid "Dialog title|About"
+msgstr ""
+
+#. License button label in About dialog
+#: ../moo/mooapp/glade/mooappabout-dialog.glade.h:6
+msgctxt "yes"
+msgid "_License"
+msgstr ""
+
+#. Translators: do not translate the part before |
+#: ../moo/mooapp/glade/mooappabout-license.glade.h:2
+msgctxt "yes"
+msgid "Dialog title|License"
+msgstr ""
+
+#. Translators: this goes into About box, under Translated by tab,
+#. do not ignore it, markup isn't always used. It should be something
+#. like "Some Guy <someguy@domain.net>", with lines separated by \n
+#: ../moo/mooapp/mooappabout.c:57
+msgid "translator-credits"
+msgstr "Kris Van Bruwaene <krvbr@yahoo.co.uk>"
+
+#. Translators: this goes into About box, under Translated by tab,
+#. this must be valid html markup, e.g.
+#. "Some Guy <a href=\"mailto:someguy@domain.net\">&lt;someguy@domain.net&gt;</a>"
+#. Lines must be separated by <br>, like "First guy<br>Second Guy"
+#: ../moo/mooapp/mooappabout.c:62
+msgid "translator-credits-markup"
+msgstr ""
+"Kris Van Bruwaene <a href=\"mailto:krvbr@yahoo.co.uk\">&lt;krvbr@yahoo.co."
+"uk&gt;</a>"
+
+#: ../moo/mooapp/mooapp.c:991
+msgid "Report a Bug..."
+msgstr ""
+
+#: ../moo/mooapp/mooapp.c:1354
+#, c-format
+msgid ""
+"The following URL will be opened:\n"
+"\n"
+"%s\n"
+"\n"
+"It contains medit version and your operating system name (%s)"
+msgstr ""
+
+#: ../moo/mooapp/mooapp.c:1361
+msgid "Open URL?"
+msgstr ""
+
+#. Prefs dialog title
+#: ../moo/mooapp/mooapp.c:1399
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:1
+msgid "<b>Dialogs</b>"
+msgstr "<b>Dialogen</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:2
+msgid "<b>Loading</b>"
+msgstr "<b>Laden</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:3
+msgid "<b>Saving</b>"
+msgstr "<b>Opslaan</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:4
+msgid "<b>Sessions</b>"
+msgstr "<b>Sessies</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:5
+msgid ""
+"Comma-separated list of encodings to try when opening a file. 'LOCALE' means "
+"current locale encoding."
+msgstr ""
+"Komma-gescheiden lijst van coderingen, die bij het openen van een bestand "
+"geprobeerd worden. 'LOCALE' is de codering van de huidige lokalisering."
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:6
+msgid "Enable _session support"
+msgstr ""
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:7
+msgid "Encoding for _new files:"
+msgstr ""
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:8
+msgid "Encodings to _autodetect:"
+msgstr ""
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:9
+msgid "Ensure trailing new_line"
+msgstr ""
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:10
+msgid "Make _backups"
+msgstr ""
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:11
+msgid "Open and Save As dialogs show current document _folder"
+msgstr ""
+
+#: ../moo/mooedit/glade/mooeditprefs-file.glade.h:12
+msgid "Remove trailing _spaces"
+msgstr ""
+
+#: ../moo/mooedit/glade/mooeditprefs-filters.glade.h:1
+msgid "<b>File filters</b>"
+msgstr "<b>Bestandsfilter</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:1
+msgid "<b>Font and colors</b>"
+msgstr "<b>Lettertypen en kleuren</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:2
+msgid "<b>Keyboard</b>"
+msgstr "<b>Toetsenbord</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:3
+msgid "Backspace key unindents"
+msgstr "Backspace ontdoet inspringen"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:4
+msgid "Color scheme:"
+msgstr "Kleurenschema"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:5
+msgid "Do not use tabs for indentation"
+msgstr "Niet inspringen met tabs"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:6
+msgid "Enable auto indentation"
+msgstr "Activeer automatisch inspringen"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:7
+msgid "Font:"
+msgstr "Lettertype:"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:8
+msgid "Indent width:"
+msgstr "Inspringbreedte:"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:9
+msgid "Smart Home and End"
+msgstr "Intelligente Home- en Eindetoetsen"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:10
+msgid "Tab key indents"
+msgstr "Inspringen met tabtoets"
+
+#: ../moo/mooedit/glade/mooeditprefs-general.glade.h:11
+msgid "Tab width:"
+msgstr "Tabbreedte:"
+
+#: ../moo/mooedit/glade/mooeditprefs-langs.glade.h:1
+msgid "<b>Language-specific options</b>"
+msgstr "<b>Taalspecifieke opties</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-langs.glade.h:2
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:4
+msgid "Extensions:"
+msgstr "Extensies:"
+
+#: ../moo/mooedit/glade/mooeditprefs-langs.glade.h:3
+msgid "Language:"
+msgstr "Taal:"
+
+#: ../moo/mooedit/glade/mooeditprefs-langs.glade.h:4
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:6
+msgid "Mime types:"
+msgstr "Mimetypes:"
+
+#: ../moo/mooedit/glade/mooeditprefs-langs.glade.h:5
+msgid "Options:"
+msgstr "Opties:"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:1
+msgid "<b>Highlighting</b>"
+msgstr "<b>Aanduiding</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:2
+msgid "<b>Misc</b>"
+msgstr "<b>Varia</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:3
+msgid "<b>Text wrapping</b>"
+msgstr "<b>Tekstomloop</b>"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:4
+msgid "Do not split words"
+msgstr "Woorden niet splitsen"
+
+#. Part of the phrase "Draw right margin at column [XX]"
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:6
+msgid "Draw right margin"
+msgstr "Toon rechtermarge"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:7
+msgid "Enable syntax highlighting"
+msgstr "Activeer syntaxiskleuring"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:8
+msgid "Enable text wrapping"
+msgstr "Activeer tekstomloop"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:9
+msgid "Highlight current line"
+msgstr "Huidige regel aanduiden"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:10
+msgid "Highlight matching brackets"
+msgstr "Samenhorende haakjes aanduiden"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:11
+msgid "Highlight mismatching brackets"
+msgstr "Fout geplaatste haakjes aanduiden"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:12
+msgid "Show line numbers"
+msgstr "Regelnummers weergeven"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:13
+msgid "Show spaces"
+msgstr ""
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:14
+msgid "Show tabs"
+msgstr "Tabulators weergeven"
+
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:15
+msgid "Show trailing spaces"
+msgstr "Toon afsluitende spaties"
+
+#. Part of the phrase "Draw right margin at column [XX]"
+#: ../moo/mooedit/glade/mooeditprefs-view.glade.h:17
+msgid "at column"
+msgstr "in kolom"
+
+#: ../moo/mooedit/glade/mooeditsavemult.glade.h:1
+msgid "Select the documents you want to save:"
+msgstr "Kies de op te slane documenten:"
+
+#: ../moo/mooedit/glade/moopluginprefs.glade.h:1
+msgid "<b>Author:</b>"
+msgstr "<b>Auteur:</b>"
+
+#: ../moo/mooedit/glade/moopluginprefs.glade.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>Beschrijving:</b>"
+
+#: ../moo/mooedit/glade/moopluginprefs.glade.h:3
+msgid "<b>Plugins</b>"
+msgstr ""
+
+#: ../moo/mooedit/glade/moopluginprefs.glade.h:4
+msgid "<b>Version:</b>"
+msgstr "<b>Versie:</b>"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:1
+msgid "Center:"
+msgstr "Midden:"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:2
+msgid "Ellipsize long lines"
+msgstr "Lange regels inkorten"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:3
+msgid "Footer"
+msgstr "Voetregel"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:4
+msgid "Header"
+msgstr "Kopregel"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:5
+msgid "Left:"
+msgstr "Links:"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:6
+msgid "Print footer"
+msgstr "Voetregel afdrukken"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:7
+msgid "Print header"
+msgstr "Kopregel afdrukken"
+
+#. Part of the phrase "Print line numbers" "every" "1" "lines"
+#: ../moo/mooedit/glade/mooprint.glade.h:9
+msgid "Print line numbers"
+msgstr "Regelnummers afdrukken"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:10
+msgid "Print separator line"
+msgstr "Scheidingslijn afdrukken"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:11
+msgid "Print using text styles"
+msgstr "Met tekststijlen afdrukken"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:12
+msgid "Right:"
+msgstr "Rechts:"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:13
+msgid "Use custom font:"
+msgstr "Gebruik zelf gekozen lettertype:"
+
+#: ../moo/mooedit/glade/mooprint.glade.h:14
+msgid "Wrap long lines"
+msgstr "Terugloop van lange regels"
+
+#. Part of the phrase "Print line numbers" "every" "1" "lines"
+#: ../moo/mooedit/glade/mooprint.glade.h:16
+msgid "every"
+msgstr "elke"
+
+#. Part of the phrase "Print line numbers" "every" "1" "lines"
+#: ../moo/mooedit/glade/mooprint.glade.h:18
+msgid "lines"
+msgstr "regels"
+
+#: ../moo/mooedit/glade/mooquicksearch.glade.h:1
+msgid "_Case sensitive"
+msgstr "_Hoofdlettergevoelig"
+
+#: ../moo/mooedit/glade/mooquicksearch.glade.h:2
+msgid "_Regular expression"
+msgstr "_Reguliere uitdrukking"
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:1
+#: ../moo/plugins/glade/moogrep.glade.h:1
+msgid "Case _sensitive"
+msgstr "Let op hoofd-/kleine letters"
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:2
+msgid "Don't _prompt on replace"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:3 ../moo/plugins/moofind.c:1115
+msgid "Find"
+msgstr "Zoeken"
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:4
+msgid "Find _backwards"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:5
+msgid "From c_ursor"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:6
+msgid "Options"
+msgstr "Opties"
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:7
+msgid "Regular e_xpression"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:8
+msgid "Replace With"
+msgstr "Vervangen met"
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:9
+msgid "S_elected text"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:10
+msgid "_Literal replacement"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:11
+msgid "_Replacement text:"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:12
+msgid "_Text to find:"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind.glade.h:13
+msgid "_Whole words only"
+msgstr ""
+
+#: ../moo/mooedit/glade/mootextfind-prompt.glade.h:1
+#: ../moo/mooedit/mooeditwindow.c:530
+msgid "Find _Next"
+msgstr "Zoek vo_lgende"
+
+#: ../moo/mooedit/glade/mootextfind-prompt.glade.h:2
+msgid "Replace _All"
+msgstr "_Alle vervangen"
+
+#: ../moo/mooedit/glade/mootextfind-prompt.glade.h:3
+msgid "Replace?"
+msgstr "Vervangen?"
+
+#: ../moo/mooedit/glade/mootextfind-prompt.glade.h:4
+msgid "Sto_p"
+msgstr "Sto_p"
+
+#: ../moo/mooedit/glade/mootextfind-prompt.glade.h:5
+msgid "_Replace"
+msgstr "_Vervangen"
+
+#: ../moo/mooedit/glade/mootextgotoline.glade.h:1
+#: ../moo/mooedit/mooeditwindow.c:580
+msgid "Go to Line"
+msgstr "Ga naar regel"
+
+#: ../moo/mooedit/glade/mootextgotoline.glade.h:2
+msgid "Go to line:"
+msgstr "Ga naar regel:"
+
+#. menu item label
+#: ../moo/mooedit/medit.xml.h:2
+msgid "Pa_nes"
+msgstr "Pa_nelen"
+
+#. menu item label
+#: ../moo/mooedit/medit.xml.h:4
+msgid "_Document"
+msgstr "_Document"
+
+#. menu item label
+#: ../moo/mooedit/medit.xml.h:6
+msgid "_File"
+msgstr "_Bestand"
+
+#. menu item label
+#: ../moo/mooedit/medit.xml.h:8
+msgid "_Search"
+msgstr "_Zoeken"
+
+#: ../moo/mooedit/medit.xml.h:9
+msgid "_Tools"
+msgstr "_Hulpmiddelen"
+
+#. menu item label
+#: ../moo/mooedit/medit.xml.h:11
+msgid "_View"
+msgstr "_Beeld"
+
+#. menu item label
+#: ../moo/mooedit/medit.xml.h:13
+msgid "_Window"
+msgstr "_Venster"
+
+#. Translators: number of documents here is always greater than one, so
+#. ignore singular form (which is simply copy of the plural here)
+#: ../moo/mooedit/mooeditdialogs.c:374
+#, c-format
+msgid ""
+"There are %u documents with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %u documents with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+"%u dokumenten zijn niet opgeslagen. Veranderingen opslaan voor het sluiten?"
+msgstr[1] ""
+"%u dokumenten zijn niet opgeslagen. Veranderingen opslaan voor het sluiten?"
+
+#: ../moo/mooedit/mooeditdialogs.c:429
+#, c-format
+msgid ""
+"Could not save file\n"
+"%s"
+msgstr ""
+"Kon bestand\n"
+"%s niet opslaan"
+
+#: ../moo/mooedit/mooeditdialogs.c:491
+#, c-format
+msgid ""
+"Could not save file %s in encoding %s. Do you want to save it in UTF-8 "
+"encoding instead?"
+msgstr ""
+
+#: ../moo/mooedit/mooeditdialogs.c:495
+msgid "Save file in UTF-8 encoding?"
+msgstr ""
+
+#. Could not open file foo.txt
+#: ../moo/mooedit/mooeditdialogs.c:522 ../moo/mooedit/mooeditdialogs.c:589
+#, c-format
+msgid ""
+"Could not open file\n"
+"%s"
+msgstr ""
+"Kon bestand\n"
+"%s niet openen"
+
+#: ../moo/mooedit/mooeditdialogs.c:528 ../moo/mooedit/mooeditdialogs.c:591
+msgid "Could not open file"
+msgstr "Kon bestand niet openen"
+
+#: ../moo/mooedit/mooeditdialogs.c:533
+#, c-format
+msgid ""
+"Could not open file using character encoding %s. Try to select another "
+"encoding below."
+msgstr ""
+
+#: ../moo/mooedit/mooeditdialogs.c:536
+#, c-format
+msgid ""
+"Could not detect file character encoding. Try to select an encoding below."
+msgstr ""
+
+#. Could not reload file foo.txt
+#: ../moo/mooedit/mooeditdialogs.c:621
+#, c-format
+msgid ""
+"Could not reload file\n"
+"%s"
+msgstr ""
+"Kon bestand\n"
+"%s niet herladen."
+
+#: ../moo/mooedit/mooeditdialogs.c:649
+#, c-format
+msgid "Discard changes in file '%s'?"
+msgstr "Veranderingen aan bestand '%s' wegwerpen?"
+
+#: ../moo/mooedit/mooeditdialogs.c:651
+msgid "If you reload the document, changes will be discarded"
+msgstr "Als u het document opnieuw inlaadt gaan alle veranderingen verloren"
+
+#: ../moo/mooedit/mooeditdialogs.c:652 ../moo/mooedit/mooeditwindow.c:438
+msgid "_Reload"
+msgstr "Opnieuw _laden"
+
+#: ../moo/mooedit/mooeditdialogs.c:674
+#, c-format
+msgid "Overwrite modified file '%s'?"
+msgstr "Veranderd bestand '%s' overschrijven?"
+
+#: ../moo/mooedit/mooeditdialogs.c:675
+#, c-format
+msgid ""
+"File '%s' was modified on disk by another process. If you save it, changes "
+"on disk will be lost."
+msgstr ""
+"De inhoud van bestand '%s' op de drager is door een ander proces veranderd."
+"Bij het opslaan gaan die veranderingen verloren."
+
+#: ../moo/mooedit/mooeditdialogs.c:677
+msgid "Over_write"
+msgstr "O_verschrijven"
+
+#: ../moo/mooedit/mooeditdialogs.c:698
+msgid ""
+"Beginning of document reached.\n"
+"Continue from the end?"
+msgstr ""
+"Begin document bereikt.\n"
+"Doorgaan vanaf einde?"
+
+#: ../moo/mooedit/mooeditdialogs.c:701
+msgid ""
+"End of document reached.\n"
+"Continue from the beginning?"
+msgstr ""
+"Einde document bereikt.\n"
+"Doorgaan vanaf begin?"
+
+#: ../moo/mooedit/mooeditdialogs.c:741
+#, c-format
+msgid "Invalid regular expression"
+msgstr ""
+
+#: ../moo/mooedit/mooedit-fileops.c:1306 ../moo/plugins/moofileselector.c:511
+msgid "Untitled"
+msgstr "Naamloos"
+
+#: ../moo/mooedit/mooedit-fileops.c:1308
+#, c-format
+msgid "Untitled %d"
+msgstr "Naamloos %d"
+
+#: ../moo/mooedit/mooeditor.c:331
+msgid "Open Recent Files Dialog"
+msgstr "Open Dialoog Laatste Bestanden"
+
+#: ../moo/mooedit/mooeditor.c:332
+msgid "Open Recent|_More..."
+msgstr "_Meer..."
+
+#: ../moo/mooedit/mooeditor.c:598
+msgid "Open new editor window"
+msgstr "Open nieuw editorvenster"
+
+#: ../moo/mooedit/mooeditor.c:784
+msgid "Open Recent"
+msgstr "Laatst Geopend"
+
+#. Translators: if translated, it should be a comma-separated list
+#. of encodings to try when opening files. Encodings names should be
+#. those understood by iconv, or "LOCALE" which means user's locale
+#. charset. For instance, the default value is "UTF-8,LOCALE,ISO_8859-15,ISO_8859-1".
+#. You want to add common preferred non-UTF8 encodings used in your locale.
+#. Do not remove ISO_8859-15 and ISO_8859-1, instead leave them at the end,
+#. these are common source files encodings.
+#: ../moo/mooedit/mooeditprefs.c:52
+msgid "encodings_list"
+msgstr ""
+
+#: ../moo/mooedit/mooeditprefspage.c:168
+msgid "PreferencesPage|General"
+msgstr ""
+
+#: ../moo/mooedit/mooeditprefspage.c:203
+msgid "PreferencesPage|File Filters"
+msgstr ""
+
+#: ../moo/mooedit/mooeditprefspage.c:255
+msgid "PreferencesPage|View"
+msgstr ""
+
+#: ../moo/mooedit/mooeditprefspage.c:301
+msgid "PreferencesPage|File"
+msgstr ""
+
+#: ../moo/mooedit/mooeditprefspage.c:340
+msgid "PreferencesPage|Languages"
+msgstr ""
+
+#. Menu item in the Language menu
+#: ../moo/mooedit/mooeditprefspage.c:555 ../moo/mooedit/mooeditwindow.c:3879
+msgid "Language|None"
+msgstr "Geen"
+
+#. Column label on File Filters prefs page
+#: ../moo/mooedit/mooeditprefspage.c:1018
+msgctxt "filter-prefs-column"
+msgid "Filter"
+msgstr "Filter"
+
+#. Column label on File Filters prefs page
+#: ../moo/mooedit/mooeditprefspage.c:1020
+msgctxt "filter-prefs-column"
+msgid "Options"
+msgstr "Opties"
+
+#: ../moo/mooedit/mooeditwindow.c:421
+msgid "Create new document"
+msgstr "Nieuw Document aanmaken"
+
+#: ../moo/mooedit/mooeditwindow.c:429
+msgid "_Open..."
+msgstr "_Openen..."
+
+#: ../moo/mooedit/mooeditwindow.c:430
+msgid "Open..."
+msgstr "Openen..."
+
+#: ../moo/mooedit/mooeditwindow.c:437 ../moo/moofileview/moofileview.c:1282
+#: ../moo/moofileview/moofileview.c:1283
+msgid "Reload"
+msgstr "Herladen"
+
+#: ../moo/mooedit/mooeditwindow.c:439
+msgid "Reload document"
+msgstr "Document herladen"
+
+#: ../moo/mooedit/mooeditwindow.c:470
+msgid "Save _As..."
+msgstr "Opslaan _als..."
+
+#: ../moo/mooedit/mooeditwindow.c:471
+msgid "Save as..."
+msgstr "Opslaan als..."
+
+#: ../moo/mooedit/mooeditwindow.c:481
+msgid "Close document"
+msgstr "Document sluiten"
+
+#: ../moo/mooedit/mooeditwindow.c:489
+msgid "Close All"
+msgstr "Alle Sluiten"
+
+#: ../moo/mooedit/mooeditwindow.c:490
+msgid "Close A_ll"
+msgstr "A_lle sluiten"
+
+#: ../moo/mooedit/mooeditwindow.c:491
+msgid "Close all documents"
+msgstr "Alle documenten sluiten"
+
+#: ../moo/mooedit/mooeditwindow.c:498
+msgid "Previous Tab"
+msgstr "Vorig Tabblad"
+
+#: ../moo/mooedit/mooeditwindow.c:499
+msgid "_Previous Tab"
+msgstr "_Volgend Tabblad"
+
+#: ../moo/mooedit/mooeditwindow.c:500
+msgid "Previous tab"
+msgstr "Vorig tabblad"
+
+#: ../moo/mooedit/mooeditwindow.c:508
+msgid "Next Tab"
+msgstr "Volgend Tabblad"
+
+#: ../moo/mooedit/mooeditwindow.c:509
+msgid "_Next Tab"
+msgstr "Volge_nd Tabblad"
+
+#: ../moo/mooedit/mooeditwindow.c:510
+msgid "Next tab"
+msgstr "Volgend tabblad"
+
+#: ../moo/mooedit/mooeditwindow.c:529
+msgid "Find Next"
+msgstr "Zoek Volgende"
+
+#: ../moo/mooedit/mooeditwindow.c:531
+msgid "Find next"
+msgstr "Zoek volgende"
+
+#: ../moo/mooedit/mooeditwindow.c:540
+msgid "Find Previous"
+msgstr "Zoek Vorige"
+
+#: ../moo/mooedit/mooeditwindow.c:541
+msgid "Find _Previous"
+msgstr "Zoek Vo_rige"
+
+#: ../moo/mooedit/mooeditwindow.c:542
+msgid "Find previous"
+msgstr "Zoek vorige"
+
+#: ../moo/mooedit/mooeditwindow.c:562
+msgid "Find Current Word"
+msgstr "Zoek huidig woord"
+
+#: ../moo/mooedit/mooeditwindow.c:563
+msgid "Find Current _Word"
+msgstr "Zoek Huidig _Woord"
+
+#: ../moo/mooedit/mooeditwindow.c:571
+msgid "Find Current Word Backwards"
+msgstr "Zoek Huidig Woord Achterwaarts"
+
+#: ../moo/mooedit/mooeditwindow.c:572
+msgid "Find Current Word _Backwards"
+msgstr "Zoek huidig Woord _Achterwaarts"
+
+#: ../moo/mooedit/mooeditwindow.c:581
+msgid "_Go to Line..."
+msgstr "_Ga naar Regel..."
+
+#: ../moo/mooedit/mooeditwindow.c:582
+msgid "Go to line..."
+msgstr "Ga naar regel..."
+
+#: ../moo/mooedit/mooeditwindow.c:591
+msgid "Toggle Text Wrapping"
+msgstr "Tekstomloop Omschakelen"
+
+#: ../moo/mooedit/mooeditwindow.c:592
+msgid "_Wrap Text"
+msgstr "_Tekstomloop"
+
+#: ../moo/mooedit/mooeditwindow.c:599
+msgid "Toggle Line Numbers Display"
+msgstr "Regelnummering Omschakelen"
+
+#: ../moo/mooedit/mooeditwindow.c:600
+msgid "Show _Line Numbers"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:606
+msgid "Focus Document"
+msgstr "Document Focusseren"
+
+#: ../moo/mooedit/mooeditwindow.c:607
+msgid "_Focus Document"
+msgstr "Document _Focusseren"
+
+#: ../moo/mooedit/mooeditwindow.c:614
+msgid "Move to Split Notebook"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:615
+msgid "_Move to Split Notebook"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:623 ../moo/mooedit/mooeditwindow.c:624
+msgid "Split View Horizontally"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:631 ../moo/mooedit/mooeditwindow.c:632
+msgid "Split View Vertically"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:638 ../moo/mooedit/mooeditwindow.c:639
+msgid "Focus Next Split View"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:683
+msgid "Toggle Bookmark"
+msgstr "Bladwijzer omschakelen"
+
+#: ../moo/mooedit/mooeditwindow.c:684
+msgid "Toggle _Bookmark"
+msgstr "Bladwijzer _Omschakelen"
+
+#: ../moo/mooedit/mooeditwindow.c:692
+msgid "Next Bookmark"
+msgstr "Volgende Bladwijzer"
+
+#: ../moo/mooedit/mooeditwindow.c:693
+msgid "_Next Bookmark"
+msgstr "Vo_lgende Bladwijzer"
+
+#: ../moo/mooedit/mooeditwindow.c:700
+msgid "Previous Bookmark"
+msgstr "Vorige Bladwijzer"
+
+#: ../moo/mooedit/mooeditwindow.c:701
+msgid "_Previous Bookmark"
+msgstr "Vo_rige Bladwijzer"
+
+#. action
+#: ../moo/mooedit/mooeditwindow.c:709 ../moo/mooedit/mooeditwindow.c:710
+#: ../moo/mooedit/mooeditwindow.c:711
+msgid "Comment"
+msgstr "Commentaar"
+
+#. action
+#: ../moo/mooedit/mooeditwindow.c:719 ../moo/mooedit/mooeditwindow.c:720
+#: ../moo/mooedit/mooeditwindow.c:721
+msgid "Uncomment"
+msgstr "Verwijder commentaar"
+
+#. Insensitive menu item which appears in Window menu with no documents open
+#: ../moo/mooedit/mooeditwindow.c:749
+msgid "No Documents"
+msgstr "Geen Documenten"
+
+#: ../moo/mooedit/mooeditwindow.c:757
+msgid "Page Setup"
+msgstr "Paginaopmaak"
+
+#: ../moo/mooedit/mooeditwindow.c:758
+msgid "Page S_etup..."
+msgstr "Pagina-_instellingen..."
+
+#: ../moo/mooedit/mooeditwindow.c:759
+msgid "Page Setup..."
+msgstr "Pagina-instellingen..."
+
+#: ../moo/mooedit/mooeditwindow.c:775 ../moo/mooedit/mooeditwindow.c:776
+msgid "Print..."
+msgstr "Afdrukken..."
+
+#: ../moo/mooedit/mooeditwindow.c:784 ../moo/mooedit/mooeditwindow.c:1932
+msgid "Export as PDF"
+msgstr "Als PDF exporteren"
+
+#: ../moo/mooedit/mooeditwindow.c:785
+msgid "E_xport as PDF..."
+msgstr "Als PDF e_xporteren..."
+
+#: ../moo/mooedit/mooeditwindow.c:786
+msgid "Export as PDF..."
+msgstr "Als PDF exporteren..."
+
+#. Translators: this goes into window title, %s stands for filename, e.g. "/foo/bar.txt [new file]"
+#: ../moo/mooedit/mooeditwindow.c:1057
+#, c-format
+msgid "%s [new file]"
+msgstr "%s [nieuw bestand]"
+
+#. Translators: this goes into window title, %s stands for filename, e.g. "/foo/bar.txt [modified on disk]"
+#: ../moo/mooedit/mooeditwindow.c:1060
+#, c-format
+msgid "%s [modified on disk]"
+msgstr "%s [veranderd op drager]"
+
+#. Translators: this goes into window title, %s stands for filename, e.g. "/foo/bar.txt [deleted]"
+#: ../moo/mooedit/mooeditwindow.c:1063
+#, c-format
+msgid "%s [deleted]"
+msgstr "%s [gewist]"
+
+#. Translators: this goes into window title, %s stands for filename, e.g. "/foo/bar.txt [new file] [modified]"
+#: ../moo/mooedit/mooeditwindow.c:1071
+#, c-format
+msgid "%s [new file] [modified]"
+msgstr "%s [nieuw bestand] [veranderd]"
+
+#. Translators: this goes into window title, %s stands for filename, e.g. "/foo/bar.txt [modified on disk] [modified]"
+#: ../moo/mooedit/mooeditwindow.c:1074
+#, c-format
+msgid "%s [modified on disk] [modified]"
+msgstr "%s [veranderd op drager] [veranderd]"
+
+#. Translators: this goes into window title, %s stands for filename, e.g. "/foo/bar.txt [deleted] [modified]"
+#: ../moo/mooedit/mooeditwindow.c:1077
+#, c-format
+msgid "%s [deleted] [modified]"
+msgstr "%s [gewist] [veranderd]"
+
+#. Translators: this goes into window title, %s stands for filename, e.g. "/foo/bar.txt [modified]"
+#: ../moo/mooedit/mooeditwindow.c:1080
+#, c-format
+msgid "%s [modified]"
+msgstr "%s [veranderd]"
+
+#: ../moo/mooedit/mooeditwindow.c:1327
+msgid "Reopen Using Encoding"
+msgstr "Heropen Met Codering"
+
+#: ../moo/mooedit/mooeditwindow.c:1377
+msgid "_Encoding"
+msgstr "_Codering"
+
+#: ../moo/mooedit/mooeditwindow.c:1431
+msgid "Line En_dings"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:1438
+msgid "_Windows (CR+LF)"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:1447
+msgid "_Unix (LF)"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:1451
+msgid "_Mac (CR)"
+msgstr ""
+
+#. Item in document tab context menu
+#: ../moo/mooedit/mooeditwindow.c:2139
+msgctxt "tab-context-menu"
+msgid "Close"
+msgstr ""
+
+#. Item in document tab context menu
+#: ../moo/mooedit/mooeditwindow.c:2151
+msgctxt "tab-context-menu"
+msgid "Close All Others"
+msgstr ""
+
+#. Item in document tab context menu
+#: ../moo/mooedit/mooeditwindow.c:2169
+msgctxt "tab-context-menu"
+msgid "Detach"
+msgstr ""
+
+#. Item in document tab context menu
+#: ../moo/mooedit/mooeditwindow.c:2179
+msgctxt "tab-context-menu"
+msgid "Move to Split Notebook"
+msgstr ""
+
+#: ../moo/mooedit/mooeditwindow.c:3733
+#, c-format
+msgid "Line: %s Col: %s"
+msgstr "Regel: %s Kolom: %s"
+
+#: ../moo/mooedit/mooeditwindow.c:3734
+#, c-format
+msgid "Chars: %s"
+msgstr "Tekens: %s"
+
+#. Label in the editor window statusbar - Overwrite or Insert mode
+#: ../moo/mooedit/mooeditwindow.c:3777
+msgid "OVR"
+msgstr "OVR"
+
+#: ../moo/mooedit/mooeditwindow.c:3777
+msgid "INS"
+msgstr "INV"
+
+#: ../moo/mooedit/mooeditwindow.c:3874
+msgid "_Language"
+msgstr "_Taal"
+
+#: ../moo/mooedit/mooplugin.c:1425
+msgctxt "Prefs page label"
+msgid "Plugins"
+msgstr ""
+
+#: ../moo/mooedit/mooplugin.c:1450
+msgctxt "plugin-prefs-column"
+msgid "Enabled"
+msgstr ""
+
+#: ../moo/mooedit/mooplugin.c:1456
+msgctxt "plugin-prefs-column"
+msgid "Plugin"
+msgstr ""
+
+#: ../moo/mooedit/mooplugin-loader.c:226
+#, c-format
+msgid ""
+"console message|ignoring file '%s', module version '%s' is not compatible "
+"with current version %u.%u"
+msgstr ""
+
+#: ../moo/mooedit/mooplugin-loader.c:235
+#, c-format
+msgid "console message|invalid module version '%s' in file '%s'"
+msgstr ""
+
+#: ../moo/mooedit/mootextfind.c:165
+msgctxt "Dialog title"
+msgid "Replace"
+msgstr "Vervangen"
+
+#: ../moo/mooedit/mootextfind.c:171
+msgctxt "Dialog title"
+msgid "Find"
+msgstr "Zoeken"
+
+#: ../moo/mooedit/mootextfind.c:475
+msgid "No search term entered"
+msgstr "Geen zoekterm gegeven"
+
+#: ../moo/mooedit/mootextfind.c:778 ../moo/mooedit/mootextfind.c:884
+#: ../moo/mooedit/mootextfind.c:1039
+msgid "Search hit top, continuing at bottom"
+msgstr "Bij zoeken begin bereikt, doorgaan bij einde"
+
+#: ../moo/mooedit/mootextfind.c:780 ../moo/mooedit/mootextfind.c:882
+#: ../moo/mooedit/mootextfind.c:962
+msgid "Search hit bottom, continuing at top"
+msgstr "Bij zoeken einde bereikt, doorgaan vanaf begin"
+
+#: ../moo/mooedit/mootextfind.c:789 ../moo/mooedit/mootextfind.c:894
+#: ../moo/mooedit/mootextfind.c:970 ../moo/mooedit/mootextfind.c:1047
+#, c-format
+msgid "Pattern not found: %s"
+msgstr "Patroon niet gevonden: %s"
+
+#: ../moo/mooedit/mootextfind.c:876
+#, c-format
+msgid "Found single instance of pattern '%s'"
+msgstr "Eenmalig voorkomen van patroon '%s' gevonden"
+
+#: ../moo/mooedit/mootextfind.c:1082
+msgid "No replacement made"
+msgstr "Niets vervangen"
+
+#: ../moo/mooedit/mootextfind.c:1088
+#, c-format
+msgid "%u replacement made"
+msgid_plural "%u replacements made"
+msgstr[0] "%u vervangen"
+msgstr[1] "%u vervangen"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:1
+msgid "Add Separator"
+msgstr "Scheidingslijn Toevoegen"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:2
+msgid "Add bookmark"
+msgstr "Bladwijzer toevoegen"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:3
+msgid "Add separator"
+msgstr "Scheidingslijn toevoegen"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:4
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:3
+msgid "Delete"
+msgstr "Wissen"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:5
+msgid "Delete selected items"
+msgstr "Gekozen onderdelen verwijderen"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:6
+#: ../moo/moofileview/moofileview.c:1242 ../moo/moofileview/moofileview.c:1243
+msgid "Edit Bookmarks"
+msgstr "Bladwijzers Bewerken"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:7
+msgid "Icon:"
+msgstr "Pictogram:"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:8
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:10
+msgid "New"
+msgstr "Nieuw"
+
+#: ../moo/moofileview/glade/moobookmark-editor.glade.h:9
+msgid "Path:"
+msgstr "Pad:"
+
+#: ../moo/moofileview/glade/moocreatefolder.glade.h:1
+msgid "Create Folder"
+msgstr "Maak Map"
+
+#: ../moo/moofileview/glade/moofileprops.glade.h:1
+msgid "General"
+msgstr "Algemeen"
+
+#: ../moo/moofileview/glade/moofileview-drop.glade.h:1
+#: ../moo/plugins/glade/moofileselector.glade.h:2
+#: ../moo/plugins/moofileselector.c:907 ../moo/plugins/moofileselector.c:932
+msgid "Save As"
+msgstr "Opslaan Als"
+
+#. Column label in file selector bookmark editor
+#: ../moo/moofileview/moobookmarkmgr.c:962
+msgctxt "fileview-bookmark-editor"
+msgid "Icon"
+msgstr "Pictogram"
+
+#. Column label in file selector bookmark editor
+#: ../moo/moofileview/moobookmarkmgr.c:978
+msgctxt "fileview-bookmark-editor"
+msgid "Label"
+msgstr ""
+
+#. Column label in file selector bookmark editor
+#: ../moo/moofileview/moobookmarkmgr.c:996
+msgctxt "fileview-bookmark-editor"
+msgid "Path"
+msgstr "Pad"
+
+#: ../moo/moofileview/moofileview.c:1116 ../moo/plugins/moofileselector.c:647
+#: ../moo/plugins/moofileselector.c:648 ../moo/plugins/moofileselector.c:1290
+#: ../moo/plugins/moofileselector-prefs.c:72
+msgid "File Selector"
+msgstr "Bestandskeuze"
+
+#: ../moo/moofileview/moofileview.c:1125
+msgid "Go to parent folder"
+msgstr "Ga naar bovenliggende map"
+
+#: ../moo/moofileview/moofileview.c:1174 ../moo/moofileview/moofileview.c:3351
+msgid "Delete..."
+msgstr "Wissen..."
+
+#: ../moo/moofileview/moofileview.c:1175 ../moo/moofileview/moofileview.c:3352
+msgid "Delete selected files"
+msgstr "Wis gekozen bestanden"
+
+#: ../moo/moofileview/moofileview.c:1185 ../moo/moofileview/moofileview.c:1186
+msgid "Show Hidden Files"
+msgstr "Toon Verborgen Bestanden"
+
+#: ../moo/moofileview/moofileview.c:1194 ../moo/moofileview/moofileview.c:1195
+msgid "Show Parent Folder"
+msgstr "Toon Bovenliggende Map"
+
+#: ../moo/moofileview/moofileview.c:1201 ../moo/moofileview/moofileview.c:1202
+msgid "Case Sensitive Sort"
+msgstr "Hoofdlettergevoelig Rangschikken"
+
+#: ../moo/moofileview/moofileview.c:1208 ../moo/moofileview/moofileview.c:1209
+msgid "Show Folders First"
+msgstr "Toon Mappen Eerst"
+
+#: ../moo/moofileview/moofileview.c:1225 ../moo/moofileview/moofileview.c:1226
+#: ../moo/moofileview/moofileview.xml.h:1
+msgid "Bookmarks"
+msgstr "Bladwijzers"
+
+#: ../moo/moofileview/moofileview.c:1234 ../moo/moofileview/moofileview.c:1235
+msgid "Add Bookmark"
+msgstr "Bladwijzer Toevoegen"
+
+#: ../moo/moofileview/moofileview.c:1586
+msgid "Filter"
+msgstr "Filter"
+
+#: ../moo/moofileview/moofileview.c:3195
+#, c-format
+msgid "Move folder %s to Trash?"
+msgstr "Map %s naar Vuilnisbak verplaatsen?"
+
+#: ../moo/moofileview/moofileview.c:3198
+#, c-format
+msgid "Move file %s to Trash?"
+msgstr "Bestand %s naar Vuilnisbak?"
+
+#: ../moo/moofileview/moofileview.c:3203
+msgid "Move selected files to Trash?"
+msgstr "Gekozen bestanden naar Vuilnisbak?"
+
+#: ../moo/moofileview/moofileview.c:3211
+#, c-format
+msgid "Delete folder %s and all its content?"
+msgstr "Map %s en alle inhoud wissen?"
+
+#: ../moo/moofileview/moofileview.c:3214
+#, c-format
+msgid "Delete file %s?"
+msgstr "Bestand %s wissen?"
+
+#: ../moo/moofileview/moofileview.c:3219
+msgid "Delete selected files?"
+msgstr "Gekozen bestanden wissen?"
+
+#: ../moo/moofileview/moofileview.c:3281
+#, c-format
+msgid "Could not delete folder %s"
+msgstr "Kon map %s niet wissen"
+
+#: ../moo/moofileview/moofileview.c:3284
+#, c-format
+msgid "Could not delete file %s"
+msgstr "Kon bestand %s niet wissen"
+
+#: ../moo/moofileview/moofileview.c:3345
+msgid "Move to Trash..."
+msgstr "Naar Vuilnisbak..."
+
+#: ../moo/moofileview/moofileview.c:3346
+msgid "Move selected files to Trash"
+msgstr "Gekozen bestanden naar Vuilnisbak"
+
+#: ../moo/moofileview/moofileview-tools.c:335
+msgid "Open with|Default Application"
+msgstr "Open with|Standaardtoepassing"
+
+#: ../moo/moofileview/moofileview.xml.h:2
+msgid "Open _With"
+msgstr "Openen _Met"
+
+#: ../moo/moofileview/moofileview.xml.h:3
+msgid "View"
+msgstr "Beeld"
+
+#: ../moo/moolua/mooluaplugin.cpp:112
+msgid "Lua"
+msgstr ""
+
+#: ../moo/moolua/mooluaplugin.cpp:112
+msgid "Lua support"
+msgstr ""
+
+#: ../moo/moopython/plugins/medit/runpython.py:43
+msgid "Python Output"
+msgstr "Pythonuitvoer"
+
+#: ../moo/moopython/plugins/python.py:48 ../moo/moopython/plugins/python.py:49
+msgid "Python Console"
+msgstr "Pythonconsole"
+
+#: ../moo/moopython/plugins/python.py:56 ../moo/moopython/plugins/python.py:57
+msgid "Run File"
+msgstr "Bestand Uitvoeren"
+
+#: ../moo/moopython/plugins/terminal.py:177
+msgid "Terminal"
+msgstr "Console"
+
+#: ../moo/moopython/plugins/terminal.py:225
+msgid "Default"
+msgstr "Standaard"
+
+#: ../moo/moopython/plugins/terminal.py:226
+msgid "Black on White"
+msgstr "Zwart op Wit"
+
+#: ../moo/moopython/plugins/terminal.py:229
+msgid "Black on Light Yellow"
+msgstr "Zwart op Lichtgeel"
+
+#: ../moo/moopython/plugins/terminal.py:232
+msgid "Marble"
+msgstr "Marmer"
+
+#: ../moo/moopython/plugins/terminal.py:235
+msgid "Green on Black"
+msgstr "Groen op Zwart"
+
+#: ../moo/moopython/plugins/terminal.py:238
+msgid "Paper, Light"
+msgstr "Papier, Licht"
+
+#: ../moo/moopython/plugins/terminal.py:241
+msgid "Paper"
+msgstr "Papier"
+
+#: ../moo/moopython/plugins/terminal.py:244
+msgid "Linux Colors"
+msgstr "Linuxkleuren"
+
+#: ../moo/moopython/plugins/terminal.py:247
+msgid "VIM Colors"
+msgstr "VIM-kleuren"
+
+#: ../moo/moopython/plugins/terminal.py:250
+msgid "White on Black"
+msgstr "Wit op Zwart"
+
+#: ../moo/mooutils/glade/mooaccelprefs.glade.h:1
+msgid "Default key:"
+msgstr "Standaardtoets:"
+
+#: ../moo/mooutils/glade/mooaccelprefs.glade.h:2
+msgid "Shortcut for selected action"
+msgstr "Sneltoets voor gekozen actie"
+
+#. Translators: do not translate the part before |
+#: ../moo/mooutils/glade/mooaccelprefs.glade.h:4
+msgctxt "yes"
+msgid "Shortcut|Custom"
+msgstr ""
+
+#. Translators: do not translate the part before |
+#: ../moo/mooutils/glade/mooaccelprefs.glade.h:6
+msgctxt "yes"
+msgid "Shortcut|Default"
+msgstr ""
+
+#. Translators: do not translate the part before |
+#: ../moo/mooutils/glade/mooaccelprefs.glade.h:8
+msgctxt "yes"
+msgid "Shortcut|None"
+msgstr ""
+
+#. Column label in Configure Shortcuts dialog
+#: ../moo/mooutils/mooaccelprefs.c:261
+msgctxt "accel-editor-column"
+msgid "Action"
+msgstr ""
+
+#. Column label in Configure Shortcuts dialog
+#: ../moo/mooutils/mooaccelprefs.c:270
+msgctxt "accel-editor-column"
+msgid "Shortcut"
+msgstr ""
+
+#. Column label in Configure Shortcuts dialog
+#: ../moo/mooutils/mooaccelprefs.c:279
+msgctxt "accel-editor-column"
+msgid "Global"
+msgstr ""
+
+#: ../moo/mooutils/mooaccelprefs.c:804
+msgid "Configure Shortcuts"
+msgstr "Sneltoetsen Instellen"
+
+#: ../moo/mooutils/moodialogs.c:419
+#, c-format
+msgid "Save changes to document \"%s\" before closing?"
+msgstr "Veranderingen aan \"%s\" opslaan voor het sluiten?"
+
+#: ../moo/mooutils/moodialogs.c:420
+msgid "Save changes to the document before closing?"
+msgstr "Veranderingen in het document opslaan voor het sluiten?"
+
+#: ../moo/mooutils/moodialogs.c:425
+msgid "If you don't save, changes will be discarded"
+msgstr "Als u niet opslaat verliest u de veranderingen"
+
+#. Translators: 012345 denotes order in which character encoding
+#. groups should appear, e.g. 543210 means inverse order.
+#. 0 - "West European",
+#. 1 - "East European",
+#. 2 - "East Asian",
+#. 3 - "SE & SW Asian",
+#. 4 - "Middle Eastern",
+#. 5 - "Unicode"
+#: ../moo/mooutils/mooencodings.c:174
+msgid "012345"
+msgstr "051423"
+
+#: ../moo/mooutils/mooencodings.c:689
+msgid "Auto Detected"
+msgstr "Automatisch Herkend"
+
+#. Translators: do not translate the part before |
+#: ../moo/mooutils/mooencodings.c:718
+msgid "Encodings combo submenu|Other"
+msgstr "Andere"
+
+#: ../moo/mooutils/mooencodings.c:817
+msgid "Charact_er encoding:"
+msgstr "T_ekencodering:"
+
+#: ../moo/mooutils/mooencodings-data.h:27
+msgid "West European"
+msgstr "Westeuropees"
+
+#: ../moo/mooutils/mooencodings-data.h:28
+msgid "East European"
+msgstr "Oosteuropees"
+
+#: ../moo/mooutils/mooencodings-data.h:29
+msgid "East Asian"
+msgstr "Oostaziatisch"
+
+#: ../moo/mooutils/mooencodings-data.h:30
+msgid "SE & SW Asian"
+msgstr "ZO- & ZW-Aziatisch"
+
+#: ../moo/mooutils/mooencodings-data.h:31
+msgid "Middle Eastern"
+msgstr "Middenoosters"
+
+#: ../moo/mooutils/mooencodings-data.h:32
+#: ../moo/mooutils/mooencodings-data.h:71
+#: ../moo/mooutils/mooencodings-data.h:72
+#: ../moo/mooutils/mooencodings-data.h:73
+#: ../moo/mooutils/mooencodings-data.h:74
+#: ../moo/mooutils/mooencodings-data.h:75
+msgid "Unicode"
+msgstr "Unicode"
+
+#: ../moo/mooutils/mooencodings-data.h:53
+msgid "Ascii"
+msgstr "Ascii"
+
+#: ../moo/mooutils/mooencodings-data.h:55
+#: ../moo/mooutils/mooencodings-data.h:68
+#: ../moo/mooutils/mooencodings-data.h:92
+#: ../moo/mooutils/mooencodings-data.h:117
+#: ../moo/mooutils/mooencodings-data.h:130
+msgid "Western"
+msgstr "Westers"
+
+#: ../moo/mooutils/mooencodings-data.h:56
+#: ../moo/mooutils/mooencodings-data.h:93
+#: ../moo/mooutils/mooencodings-data.h:107
+#: ../moo/mooutils/mooencodings-data.h:128
+msgid "Central European"
+msgstr "Centraaleuropees"
+
+#: ../moo/mooutils/mooencodings-data.h:57
+msgid "South European"
+msgstr "Zuideuropees"
+
+#: ../moo/mooutils/mooencodings-data.h:58
+#: ../moo/mooutils/mooencodings-data.h:66
+#: ../moo/mooutils/mooencodings-data.h:135
+msgid "Baltic"
+msgstr "Baltisch"
+
+#: ../moo/mooutils/mooencodings-data.h:59
+#: ../moo/mooutils/mooencodings-data.h:94
+#: ../moo/mooutils/mooencodings-data.h:101
+#: ../moo/mooutils/mooencodings-data.h:103
+#: ../moo/mooutils/mooencodings-data.h:109
+#: ../moo/mooutils/mooencodings-data.h:129
+msgid "Cyrillic"
+msgstr "Cyrillisch"
+
+#: ../moo/mooutils/mooencodings-data.h:60
+#: ../moo/mooutils/mooencodings-data.h:97
+#: ../moo/mooutils/mooencodings-data.h:106
+#: ../moo/mooutils/mooencodings-data.h:134
+msgid "Arabic"
+msgstr "Arabisch"
+
+#: ../moo/mooutils/mooencodings-data.h:61
+#: ../moo/mooutils/mooencodings-data.h:112
+#: ../moo/mooutils/mooencodings-data.h:131
+msgid "Greek"
+msgstr "Grieks"
+
+#: ../moo/mooutils/mooencodings-data.h:62
+msgid "Hebrew Visual"
+msgstr "Hebreeuws (Visueel)"
+
+#: ../moo/mooutils/mooencodings-data.h:63
+#: ../moo/mooutils/mooencodings-data.h:96
+#: ../moo/mooutils/mooencodings-data.h:115
+#: ../moo/mooutils/mooencodings-data.h:133
+msgid "Hebrew"
+msgstr "Hebreeuws"
+
+#: ../moo/mooutils/mooencodings-data.h:64
+#: ../moo/mooutils/mooencodings-data.h:95
+#: ../moo/mooutils/mooencodings-data.h:119
+#: ../moo/mooutils/mooencodings-data.h:132
+msgid "Turkish"
+msgstr "Turks"
+
+#: ../moo/mooutils/mooencodings-data.h:65
+msgid "Nordic"
+msgstr "Noords"
+
+#: ../moo/mooutils/mooencodings-data.h:67
+msgid "Celtic"
+msgstr "Keltisch"
+
+#: ../moo/mooutils/mooencodings-data.h:69
+#: ../moo/mooutils/mooencodings-data.h:118
+msgid "Romanian"
+msgstr "Roemeens"
+
+#: ../moo/mooutils/mooencodings-data.h:77
+msgid "Armenian"
+msgstr "Armeens"
+
+#: ../moo/mooutils/mooencodings-data.h:78
+#: ../moo/mooutils/mooencodings-data.h:79
+#: ../moo/mooutils/mooencodings-data.h:84
+msgid "Chinese Traditional"
+msgstr "Chinees (Traditioneel)"
+
+#: ../moo/mooutils/mooencodings-data.h:80
+msgid "Cyrillic/Russian"
+msgstr "Cyrillisch/Russisch"
+
+#: ../moo/mooutils/mooencodings-data.h:82
+#: ../moo/mooutils/mooencodings-data.h:99
+#: ../moo/mooutils/mooencodings-data.h:122
+msgid "Japanese"
+msgstr "Japans"
+
+#: ../moo/mooutils/mooencodings-data.h:83
+#: ../moo/mooutils/mooencodings-data.h:100
+#: ../moo/mooutils/mooencodings-data.h:102
+#: ../moo/mooutils/mooencodings-data.h:125
+msgid "Korean"
+msgstr "Koreaans"
+
+#: ../moo/mooutils/mooencodings-data.h:86
+#: ../moo/mooutils/mooencodings-data.h:87
+#: ../moo/mooutils/mooencodings-data.h:88
+#: ../moo/mooutils/mooencodings-data.h:90
+msgid "Chinese Simplified"
+msgstr "Chinees (Vereenvoudigd)"
+
+#: ../moo/mooutils/mooencodings-data.h:89
+msgid "Georgian"
+msgstr "Georgisch"
+
+#: ../moo/mooutils/mooencodings-data.h:104
+#: ../moo/mooutils/mooencodings-data.h:120
+msgid "Cyrillic/Ukrainian"
+msgstr "Cyrillisch/Oekraiens"
+
+#: ../moo/mooutils/mooencodings-data.h:108
+msgid "Croatian"
+msgstr "Kroatisch"
+
+#: ../moo/mooutils/mooencodings-data.h:110
+msgid "Hindi"
+msgstr "Hindi"
+
+#: ../moo/mooutils/mooencodings-data.h:111
+msgid "Persian"
+msgstr "Perzisch"
+
+#: ../moo/mooutils/mooencodings-data.h:113
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: ../moo/mooutils/mooencodings-data.h:114
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: ../moo/mooutils/mooencodings-data.h:116
+msgid "Icelandic"
+msgstr "IJslands"
+
+#: ../moo/mooutils/mooencodings-data.h:123
+#: ../moo/mooutils/mooencodings-data.h:126
+#: ../moo/mooutils/mooencodings-data.h:136
+msgid "Vietnamese"
+msgstr "Vietnamees"
+
+#: ../moo/mooutils/mooencodings-data.h:124
+msgid "Thai"
+msgstr "Thai"
+
+#. menu item in Insert Special Character submenu of text entry context menu
+#: ../moo/mooutils/mooentry.c:533
+msgctxt "insert-special-char"
+msgid "Line End"
+msgstr ""
+
+#. menu item in Insert Special Character submenu of text entry context menu
+#: ../moo/mooutils/mooentry.c:535
+msgctxt "insert-special-char"
+msgid "Tab"
+msgstr ""
+
+#. label of Insert Special Character submenu in text entry context menu
+#: ../moo/mooutils/mooentry.c:578
+msgctxt "insert-special-char"
+msgid "Insert Special Character"
+msgstr ""
+
+#: ../moo/mooutils/moofiledialog.c:650
+msgid "Selected file is not a regular file"
+msgstr ""
+
+#: ../moo/mooutils/moofilewriter.c:101
+#, c-format
+msgid "Could not open %s: %s"
+msgstr "Kon %s niet openen: %s"
+
+#: ../moo/mooutils/moofilewriter.c:291 ../moo/mooutils/mooutils-fs.c:386
+#: ../moo/mooutils/mooutils-fs.c:405 ../moo/mooutils/mooutils-fs.c:421
+#, c-format
+msgid "Could not create folder %s: %s"
+msgstr "Kon map %s niet aanmaken: %s"
+
+#: ../moo/mooutils/moofiltermgr.c:545
+msgid "_Show:"
+msgstr "_Toon:"
+
+#: ../moo/mooutils/moohelp.c:205
+msgid "Help files not found"
+msgstr "Hulpbestanden niet gevonden"
+
+#: ../moo/mooutils/moohelp.c:217
+#, c-format
+msgid "File '%s' is missing in the directory '%s'"
+msgstr "Bestand '%s' ontbreekt in map '%s'"
+
+#: ../moo/mooutils/moohelp.c:220
+msgid "Could not find help file"
+msgstr "Kon hulpbestand niet vinden"
+
+#: ../moo/mooutils/moopane.c:702
+msgid "Remove pane"
+msgstr "Paneel verwijderen"
+
+#: ../moo/mooutils/moopane.c:712
+msgid "Hide pane"
+msgstr "Paneel verbergen"
+
+#: ../moo/mooutils/moopane.c:716
+msgid "Sticky"
+msgstr "Kleverig"
+
+#: ../moo/mooutils/moopane.c:720
+msgid "Detach pane"
+msgstr "Paneel loskoppelen"
+
+#: ../moo/mooutils/moopane.c:733
+msgid "Attach"
+msgstr "Aanhechten"
+
+#: ../moo/mooutils/moopane.c:737
+msgid "Keep on top"
+msgstr "Altijd bovenaan"
+
+#: ../moo/mooutils/moostock.c:29
+msgid "Save _None"
+msgstr "_Niets opslaan"
+
+#: ../moo/mooutils/moostock.c:30
+msgid "Save _Selected"
+msgstr "_Gekozen opslaan"
+
+#: ../moo/mooutils/moostock.c:32
+msgid "Move"
+msgstr "Bewegen"
+
+#: ../moo/mooutils/moostock.c:33
+msgid "Link"
+msgstr "Koppeling"
+
+#: ../moo/mooutils/moostock.c:35 ../moo/plugins/moofileselector.c:1136
+msgid "Save Copy"
+msgstr "Kopie Opslaan"
+
+#: ../moo/mooutils/moostock.c:36
+msgid "_New Folder"
+msgstr "_Nieuwe map"
+
+#: ../moo/mooutils/moostock.c:37
+msgid "New _Window"
+msgstr "Nieuw _Venster"
+
+#. This is error message in file selector when rm
+#. fails for some strange reason
+#: ../moo/mooutils/mooutils-fs.c:226
+#, c-format
+msgid "Could not run 'rm' command: %s"
+msgstr "Kon 'rm'-opdracht niet uitvoeren: %s"
+
+#. This is error message in file selector when rm
+#. fails to delete a file or folder
+#: ../moo/mooutils/mooutils-fs.c:244
+#, c-format
+msgid "'rm' command failed: %s"
+msgstr "'rm' opdracht mislukt: %s"
+
+#: ../moo/mooutils/mooutils-fs.c:294 ../moo/mooutils/mooutils-fs.c:314
+#: ../moo/mooutils/mooutils-fs.c:341
+#, c-format
+msgid "Could not remove %s: %s"
+msgstr "Kon %s niet verwijderen: %s"
+
+#: ../moo/mooutils/mooutils-fs.c:450
+#, c-format
+msgid "Could not rename file %s to %s: %s"
+msgstr "Kon bestand %s niet hernoemen tot %s: %s"
+
+#: ../moo/mooutils/mooutils-misc.c:1668
+#, c-format
+msgid "console message|in file %s, line %d, function %s: %s"
+msgstr ""
+
+#. "Unknown error" may be displayed if there is a bug in the program
+#. and proper error message has not been set. It doesn't provide any
+#. useful information obviously
+#: ../moo/mooutils/mooutils-misc.c:2053
+msgid "Unknown error"
+msgstr ""
+
+#: ../moo/mooutils/moowindow.c:243
+msgid "Configure _Shortcuts..."
+msgstr "_Sneltoetsen Instellen..."
+
+#: ../moo/mooutils/moowindow.c:251 ../moo/mooutils/moowindow.c:252
+msgid "Show Toolbar"
+msgstr "Werkbalk Tonen"
+
+#: ../moo/mooutils/moowindow.c:258 ../moo/mooutils/moowindow.c:259
+msgid "Show Menubar"
+msgstr "Menubalk Tonen"
+
+#: ../moo/mooutils/moowindow.c:266 ../moo/mooutils/moowindow.c:267
+msgid "Show Statusbar"
+msgstr "Statusbalk Tonen"
+
+#: ../moo/mooutils/moowindow.c:461
+#, c-format
+msgid "Could not parse geometry string '%s'\n"
+msgstr ""
+
+#: ../moo/mooutils/moowindow.c:1187
+msgid "_Icons Only"
+msgstr "Enkel _Pictogrammen"
+
+#: ../moo/mooutils/moowindow.c:1188
+msgid "_Labels Only"
+msgstr "Enkel _Tekst"
+
+#: ../moo/mooutils/moowindow.c:1189
+msgid "Labels _Below Icons"
+msgstr "Etiketten _Onder Pictogrammen"
+
+#: ../moo/mooutils/moowindow.c:1190
+msgid "Labels Be_side Icons"
+msgstr "Etiketten Naa_st Pictogrammen"
+
+#: ../moo/mooutils/moowindow.c:1200
+msgid "Toolbar _Style"
+msgstr "Werkbalk_stijl"
+
+#. label of Ctags plugin pane
+#: ../moo/plugins/ctags/ctags-plugin.c:119
+#: ../moo/plugins/ctags/ctags-plugin.c:120
+msgctxt "window-pane"
+msgid "Functions"
+msgstr ""
+
+#: ../moo/plugins/glade/moofileselector.glade.h:1
+msgid "Create File"
+msgstr "Bestand Aanmaken"
+
+#: ../moo/plugins/glade/moofileselector.glade.h:3
+msgid "Save as"
+msgstr "Opslaan als"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:1
+msgid "<b>Open With</b>"
+msgstr "<b>Openen Met</b>"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:2
+msgid "Command:"
+msgstr "Opdracht:"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:5
+msgid "Menu item label"
+msgstr "Menutekst"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:7
+msgid "Move down"
+msgstr "Naar beneden"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:8
+msgid "Move up"
+msgstr "Naar boven"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:9
+msgid "Name:"
+msgstr "Naam:"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:11
+msgid "Semicolon-separated list of file globs, e.g. '*.txt;foo.*;*bar*'"
+msgstr ""
+"Met puntkomma's gescheiden lijst van bestandsfilters, bijv. '*.txt;foo.*;"
+"*bar*'"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:12
+msgid ""
+"Semicolon-separated list of mime types, e.g. 'text/*;application/x-glade'"
+msgstr ""
+"Met puntkomma's gescheiden lijst van mimetypes, bijv. 'text/*;application/x-"
+"glade'"
+
+#: ../moo/plugins/glade/moofileselector-prefs.glade.h:14
+#, no-c-format
+msgid ""
+"Shell command to open the file: '%f' is replaced with file path, e.g. "
+"'foobar %f'"
+msgstr ""
+"Consoleopdracht om bestand '%f' te openen wordt vervangen door bestandspad, "
+"bijv. 'foobar %f'"
+
+#: ../moo/plugins/glade/moofind.glade.h:1
+#: ../moo/plugins/glade/moogrep.glade.h:3
+msgid "S_kip files:"
+msgstr "Bestanden _overslaan:"
+
+#: ../moo/plugins/glade/moofind.glade.h:2
+#: ../moo/plugins/glade/moogrep.glade.h:4
+msgid "_Directory:"
+msgstr "_Map:"
+
+#: ../moo/plugins/glade/moofind.glade.h:3
+#: ../moo/plugins/glade/moogrep.glade.h:5
+msgid "_Pattern:"
+msgstr "_Patroon:"
+
+#: ../moo/plugins/glade/moogrep.glade.h:2
+msgid "Fi_les:"
+msgstr "_Bestanden:"
+
+#: ../moo/plugins/moofilelist.c:2353 ../moo/plugins/moofilelist.c:2354
+#: ../moo/plugins/moofilelist.c:2411
+msgid "File List"
+msgstr "Bestandslijst"
+
+#: ../moo/plugins/moofilelist.c:2411
+msgid "List of files"
+msgstr "Lijst van bestanden"
+
+#: ../moo/plugins/moofileselector.c:388
+#, c-format
+msgid "Create file in folder '%s':"
+msgstr "Bestand in folder '%s' aanmaken:"
+
+#: ../moo/plugins/moofileselector.c:443
+#, c-format
+msgid "Could not create file '%s'"
+msgstr "Kan bestand '%s' niet aanmaken"
+
+#: ../moo/plugins/moofileselector.c:444 ../moo/plugins/moofileselector.c:820
+#, c-format
+msgid ""
+"Could not convert '%s' to filename encoding. Please consider simpler name, "
+"such as foo.blah or blah.foo"
+msgstr ""
+"'%s' kan niet als bestandsnaam gecodeerd worden. Bedenk een eenvoudiger "
+"naam, zoals foo.bla of bla.foo"
+
+#: ../moo/plugins/moofileselector.c:459
+#, c-format
+msgid "File '%s' already exists"
+msgstr "Bestand '%s' bestaat al"
+
+#: ../moo/plugins/moofileselector.c:612
+msgid "Go to current document directory"
+msgstr "Ga naar huidige documentfolder"
+
+#: ../moo/plugins/moofileselector.c:624 ../moo/plugins/moofileselector.c:625
+msgid "New File..."
+msgstr "Nieuw Bestand..."
+
+#: ../moo/plugins/moofileselector.c:819
+#, c-format
+msgid "Could not save file as '%s'"
+msgstr "Bestand kan niet als '%s' opgeslagen worden"
+
+#: ../moo/plugins/moofileselector.c:952
+msgid "Save Copy As"
+msgstr "Kopie Opslaan Als"
+
+#: ../moo/plugins/moofileselector.c:978
+msgid "Rename To"
+msgstr "Herbenoemen Als"
+
+#: ../moo/plugins/moofileselector.c:1118
+msgid "Move Here"
+msgstr "Hierheen Verplaatsen"
+
+#: ../moo/plugins/moofileselector.c:1119
+msgid "Move/Rename..."
+msgstr "Verplaatsen/Herbenoemen..."
+
+#: ../moo/plugins/moofileselector.c:1127
+msgid "Save Here"
+msgstr "Hier Opslaan"
+
+#: ../moo/plugins/moofileselector.c:1128
+msgid "Save As..."
+msgstr "Opslaan Als..."
+
+#: ../moo/plugins/moofileselector.c:1137
+msgid "Save Copy As..."
+msgstr "Kopie Opslaan Als..."
+
+#: ../moo/plugins/moofileselector.c:1291
+msgid "File selector pane for editor window"
+msgstr "Bestandskeuzepaneel voor editorvenster"
+
+#: ../moo/plugins/moofind.c:185
+msgid "Search Results"
+msgstr "Zoekresultaten"
+
+#: ../moo/plugins/moofind.c:249 ../moo/plugins/moofind.c:250
+msgid "Find In Files"
+msgstr "Zoek In Bestanden"
+
+#: ../moo/plugins/moofind.c:251
+msgid "Find in files"
+msgstr "Zoek in bestanden"
+
+#: ../moo/plugins/moofind.c:259 ../moo/plugins/moofind.c:260
+#: ../moo/plugins/moofind.c:995
+msgid "Find File"
+msgstr "Zoek Bestand"
+
+#: ../moo/plugins/moofind.c:261
+msgid "Find file"
+msgstr "Zoek bestand"
+
+#: ../moo/plugins/moofind.c:964
+msgid "Find in Files"
+msgstr "Zoek in Bestanden"
+
+#: ../moo/plugins/moofind.c:1047 ../moo/plugins/moofind.c:1073
+#, c-format
+msgid "*** %u match found ***"
+msgid_plural "*** %u matches found ***"
+msgstr[0] "*** %u treffer gevonden ***"
+msgstr[1] "*** %u treffers gevonden ***"
+
+#: ../moo/plugins/moofind.c:1054 ../moo/plugins/moofind.c:1079
+#, c-format
+msgid "*** %u file found ***"
+msgid_plural "*** %u files found ***"
+msgstr[0] "*** %u bestand gevonden ***"
+msgstr[1] "*** %u bestanden gevonden ***"
+
+#: ../moo/plugins/moofind.c:1115
+msgid "Finds everything"
+msgstr "Vindt alles"
+
+#. label of Output window pane
+#: ../moo/plugins/support/mooeditwindowoutput.c:33
+#: ../moo/plugins/support/mooeditwindowoutput.c:34
+msgctxt "window-pane"
+msgid "Output"
+msgstr "Uitvoer"
+
+#. Output filter for shell commands
+#: ../moo/plugins/usertools/filters.xml.h:2
+msgid "Filter|Bison"
+msgstr ""
+
+#. Output filter for shell commands
+#: ../moo/plugins/usertools/filters.xml.h:4
+msgid "Filter|Default"
+msgstr "Standaard"
+
+#. Output filter for shell commands
+#: ../moo/plugins/usertools/filters.xml.h:6
+msgid "Filter|LaTeX"
+msgstr ""
+
+#. Output filter for shell commands
+#: ../moo/plugins/usertools/filters.xml.h:8
+msgid "Filter|Make"
+msgstr ""
+
+#. Output filter for shell commands
+#: ../moo/plugins/usertools/filters.xml.h:10
+msgid "Filter|None"
+msgstr "Geen"
+
+#. Output filter for shell commands
+#: ../moo/plugins/usertools/filters.xml.h:12
+msgid "Filter|Python"
+msgstr ""
+
+#: ../moo/plugins/usertools/glade/mooedittools-exe.glade.h:1
+msgid "Filter:"
+msgstr "Filter:"
+
+#: ../moo/plugins/usertools/glade/mooedittools-exe.glade.h:2
+msgid "Input:"
+msgstr "Ingave:"
+
+#: ../moo/plugins/usertools/glade/mooedittools-exe.glade.h:3
+msgid "Output:"
+msgstr "Uitvoer:"
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:1
+msgid "Delete item"
+msgstr "Onderdeel wissen"
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:2
+msgid "Enabled"
+msgstr "Geactiveerd"
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:3
+msgid "Move item down"
+msgstr "Beweeg onderdeel naar beneden"
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:4
+msgid "Move item up"
+msgstr "Beweeg onderdeel naar boven"
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:5
+msgid "New item"
+msgstr "Nieuw onderdeel"
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:6
+msgid "_Files:"
+msgstr ""
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:7
+msgid "_Requires:"
+msgstr ""
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:8
+msgid "_Save:"
+msgstr ""
+
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:9
+msgid "_Type:"
+msgstr ""
+
+#. Label of notebook tab on User Tools prefs page, do not translate the part before |
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:11
+msgctxt "yes"
+msgid "user-tools-prefs|Context menu"
+msgstr ""
+
+#. Label of notebook tab on User Tools prefs page, do not translate the part before |
+#: ../moo/plugins/usertools/glade/moousertools.glade.h:13
+msgctxt "yes"
+msgid "user-tools-prefs|Tools menu"
+msgstr ""
+
+#: ../moo/plugins/usertools/moocommand-exe.c:89
+msgid "Output|None"
+msgstr "Geen"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:90
+msgid "Output|None, asynchronous"
+msgstr "Geen, asynchroon"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:92
+msgid "Output|Console"
+msgstr ""
+
+#: ../moo/plugins/usertools/moocommand-exe.c:94
+msgid "Output|Output pane"
+msgstr "Uitvoerpaneel"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:95
+msgid "Output|Insert into the document"
+msgstr "In document invoegen"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:96
+msgid "Output|New document"
+msgstr "Nieuw document"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:826
+msgid "Shell command"
+msgstr "Commandoregel"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:1070
+msgid "Input|None"
+msgstr "Geen"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:1071
+msgid "Input|Selected lines"
+msgstr "Gekozen regels"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:1072
+msgid "Input|Selection"
+msgstr "Selectie"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:1073
+msgid "Input|Whole document"
+msgstr "Volledig document"
+
+#: ../moo/plugins/usertools/moocommand-exe.c:1074
+msgid "Input|Document copy"
+msgstr ""
+
+#: ../moo/plugins/usertools/moocommand-script.cpp:279
+msgid "Lua script"
+msgstr "Luascript"
+
+#: ../moo/plugins/usertools/moocommand-script.cpp:285
+msgid "Python script"
+msgstr "Pythonscript"
+
+#: ../moo/plugins/usertools/moousertools.c:395
+#: ../moo/plugins/usertools/moousertools-prefs.c:559
+msgid "Tools"
+msgstr "Hulpmiddelen"
+
+#: ../moo/plugins/usertools/moousertools.c:1377
+msgid "User Tools"
+msgstr ""
+
+#: ../moo/plugins/usertools/moousertools.c:1378
+msgid "Configurable tools"
+msgstr ""
+
+#: ../moo/plugins/usertools/moousertools-prefs.c:109
+msgid "New Command"
+msgstr "Nieuwe Opdracht"
+
+#. 'Requires' combo box entry on Tools prefs page
+#: ../moo/plugins/usertools/moousertools-prefs.c:162
+msgctxt "Requires-combo"
+msgid "Nothing"
+msgstr ""
+
+#. 'Requires' combo box entry on Tools prefs page
+#: ../moo/plugins/usertools/moousertools-prefs.c:164
+msgctxt "Requires-combo"
+msgid "Document"
+msgstr ""
+
+#. 'Requires' combo box entry on Tools prefs page
+#: ../moo/plugins/usertools/moousertools-prefs.c:166
+msgctxt "Requires-combo"
+msgid "File on disk"
+msgstr ""
+
+#. 'Save' combo box entry on Tools prefs page
+#: ../moo/plugins/usertools/moousertools-prefs.c:177
+msgctxt "Save-combo"
+msgid "Nothing"
+msgstr ""
+
+#. 'Save' combo box entry on Tools prefs page
+#: ../moo/plugins/usertools/moousertools-prefs.c:179
+msgctxt "Save-combo"
+msgid "Current document"
+msgstr ""
+
+#. 'Save' combo box entry on Tools prefs page
+#: ../moo/plugins/usertools/moousertools-prefs.c:181
+msgctxt "Save-combo"
+msgid "All documents"
+msgstr ""
+
+#~ msgid "Could not save file"
+#~ msgstr "Kon bestand niet opslaan"
+
+#~ msgid ""
+#~ "Error saving file\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Fout bij opslaan van bestand\n"
+#~ "%s"
+
+#~ msgid "Error saving file"
+#~ msgstr "Fout bij opslaan bestand"
+
+#~ msgid "Command type:"
+#~ msgstr "Commandotype:"
+
+#~ msgid "Context menu"
+#~ msgstr "Contextmenu"
+
+#~ msgid "Tools menu"
+#~ msgstr "Hulpmiddelenmenu"
+
+#~ msgid "Case sensitive"
+#~ msgstr "Hoofdlettergevoelig"
+
+#~ msgid "<b>Default language</b>"
+#~ msgstr "<b>Standaardtaal</b>"
+
+#~ msgid "Python"
+#~ msgstr "Python"
+
+#~ msgid "Python support"
+#~ msgstr "Pythonondersteuning"
+
+#~ msgid "Execute python code in an existing instance"
+#~ msgstr "Voer pythoncode uit in bestaande instantie"
+
+#~ msgid "CODE"
+#~ msgstr "CODE"
+
+#~ msgid "Execute python file in an existing instance"
+#~ msgstr "Voer pythonbestand uit in bestaande instantie"
+
+#~ msgid "FILE"
+#~ msgstr "BESTAND"
+
+#~ msgid "Unrecognized desktop file Version '%s'"
+#~ msgstr "Onbekende Versie '%s' van bureaubladbestand"
+
+#~ msgid "Starting %s"
+#~ msgstr "%s aan het opstarten"
+
+#~ msgid "Application does not accept documents on command line"
+#~ msgstr "Toepassing aanvaardt geen documenten in opdrachtregel"
+
+#~ msgid "Unrecognized launch option: %d"
+#~ msgstr "Onbekende startoptie: %d"
+
+#~ msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+#~ msgstr ""
+#~ "Kan geen documenten-URI's doorgeven aan een bureaublad-item met "
+#~ "'Type=Link'"
+
+#~ msgid "Not a launchable item"
+#~ msgstr "Geen startbaar item"
+
+#~ msgid "Disable connection to session manager"
+#~ msgstr "Belet verbinding met sessiebeheer"
+
+#~ msgid "Specify file containing saved configuration"
+#~ msgstr "Geef bestand met opgeslagen configuratie"
+
+#~ msgid "Specify session management ID"
+#~ msgstr "Geef ID voor sessiebeheer"
+
+#~ msgid "Session Management Options"
+#~ msgstr "Opties voor Sessiebeheer"
+
+#~ msgid "Show Session Management options"
+#~ msgstr "Toon Opties voor Sessiebeheer"
+
+#~ msgid "Show only fixed width fonts"
+#~ msgstr "Toon enkel letters met vaste breedte"
+
+#~ msgid "Terminal plugin"
+#~ msgstr "Consoleplugin"
+
+#~ msgid "Could not create temporary file %s: %s"
+#~ msgstr "Kon tijdelijk bestand %s niet aanmaken: %s"
+
+#~ msgid "medit"
+#~ msgstr "medit"
+
+#~ msgid "Dialog title|System Info"
+#~ msgstr "Systeeminfo"
+
+#~ msgid "System Info"
+#~ msgstr "Systeeminfo"
+
+#~ msgid "Use default theme font"
+#~ msgstr "Gebruik de normale themaletter"
+
+#~ msgid "Loading and saving"
+#~ msgstr "Laden en opslaan"
+
+#~ msgid "Languages and files"
+#~ msgstr "Talen en bestanden"
+
+#~ msgid "medit is a text editor"
+#~ msgstr "medit is een teksteditor"
+
+#~ msgid "DPatch"
+#~ msgstr "DPatch"
+
+#~ msgid "GAP source file"
+#~ msgstr "GAP-bronbestand"
