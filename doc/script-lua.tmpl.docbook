@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE article [
+<!ENTITY % medit-defines SYSTEM "medit-defines.ent">
+%medit-defines;
+]>
+<chapter id="chapter-script-lua">
+<?dbhtml filename="lua-moo.html"?>
+<title>&medit; Lua API</title>
+
+<sect1 id="section-script-lua-introduction">
+<title>Introduction</title>
+<para>Lua scripts running in &medit; have access to its
+functionality through the <code>moo</code> package.</para>
+<warning>
+Functions which are not documented here may or may not work differently in
+the future and they may disappear without notice. Contact the author if you
+need functions which are not present here.
+</warning>
+</sect1>
+
+<sect1 id="section-script-lua-object-model">
+<title>&medit; object model</title>
+<para>&medit; uses a very simple object model where its objects are
+represented as user data in Lua and methods are provided via metatable
+shared by all objects of all "classes". Method dispatch is dynamic,
+i.e. metatable does not contain functions which correspond to methods,
+and <code>obj:method</code> returns a function object which knows which
+method on which object it is going to call.</para>
+<para>This manual lists and talks about "classes", but it is merely
+to avoid complicated terminology. When we say that an object belongs
+to or is an instance of a class <code>Foo</code>, it just means that
+it has methods listed in manual section for class <code>Foo</code>
+and methods of parent classes, if any.</para>
+<note>
+To call a method, you can use both <code>obj:method(args)</code>
+and <code>obj.method(args)</code>.
+</note>
+</sect1>
+
+<sect1 id="section-script-lua-notations">
+<title>Notations</title>
+<para>This manual uses the following conventions:</para>
+<variablelist>
+  <varlistentry>
+    <term>Optional parameters</term>
+    <listitem>
+    <programlisting>func(arg1=val1, arg2=val, arg3=val3)</programlisting>
+    <code><parameter>arg</parameter>=val</code> means that
+    parameter <parameter>arg</parameter> is optional, and function receives
+    value <code>val</code> if it's missing. Not all parameters are necessarily
+    optional. For example, <programlisting>insert_text(text, where=nil)</programlisting>
+    means that <parameter>text</parameter> may not be missing or <constant>nil</constant>
+    (unless documentation says otherwise), and <parameter>where</parameter> is optional.
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term>Keyword parameters</term>
+    <listitem>
+    <programlisting>func{arg1, arg2, kwarg1=kwval1, kwarg2=kwval2}</programlisting>
+    This means that function can be called in an alternative way: actual parameters are
+    taken from the single table parameter, which must be a dictionary with keys
+    <parameter>kwarg1</parameter>, <parameter>kwarg2</parameter>, etc., and whose array part
+    must contain exactly as many values as there are non-optional arguments. Similarly
+    to regular parameters, <code><parameter>kwarg</parameter>=kwval</code> means that
+    <parameter>kwarg</parameter> is optional. For example, above function can be called
+    as follows.
+    <programlisting>
+<!-- -->func{1, 2, kwarg1='foo'} -- equivalent to func(1, 2, 'foo')
+<!-- -->func{3, 4, kwarg2='bar'} -- equivalent to func(3, 4, kwval1, 'bar')
+<!-- -->func{5, 6, kwarg2='baz', kwarg1='bud', } -- equivalent to func(5, 6, 'bud', 'baz')</programlisting>
+    This is similar to Python keyword arguments (with the difference that keyword arguments
+    may be used only if function is documented to support them).
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</sect1>
+###GENERATED###
+</chapter>
