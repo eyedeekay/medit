@@ -1,0 +1,47 @@
+#! /bin/sh
+
+gsed=`which gsed 2>/dev/null`
+if [ -x "$gsed" ]; then
+  sed=$gsed
+  ext_opt=-r
+else
+  sed=sed
+  case `uname` in
+    Darwin|*BSD)
+      ext_opt=-E
+      ;;
+    *)
+      ext_opt=-r
+      ;;
+  esac
+fi
+
+if [ $# != 2 ]; then
+  echo "usage: $0 src_file dst_file" > /dev/stderr
+  exit 1
+fi
+
+src="$1"
+dst="$2"
+
+do_xml() {
+  $sed -e 's@<_@<@g' -e 's@</_@</@g' "$src" > "$dst.tmp" || exit 1
+  mv "$dst.tmp" "$dst" || exit1
+}
+
+do_desktop() {
+  $sed $ext_opt -e 's@^_(\w+)=@\1=@g' "$src" > "$dst.tmp" || exit 1
+  mv "$dst.tmp" "$dst" || exit1
+}
+
+case "$src" in
+  *.xml.in)
+    do_xml
+    ;;
+  *.desktop.in|*.ini.in)
+    do_desktop
+    ;;
+  *)
+    echo "unknown file type: $src" > /dev/stderr
+    exit 1
+esac
