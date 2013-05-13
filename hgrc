@@ -1,0 +1,7 @@
+[paths]
+default = ssh://hg@bitbucket.org/medit/medit
+
+[hooks]
+# Reject commits which would introduce windows-style text" files
+pretxncommit.crlf = python:hgext.win32text.forbidcrlf
+pretxncommit.glade = tools/checkglade
