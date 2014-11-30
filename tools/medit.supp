@@ -1,0 +1,253 @@
+{
+   <foobar>
+   Memcheck:Cond
+   fun:inflateReset2
+}
+
+{
+   <foobar>
+   Memcheck:Leak
+   ...
+   fun:gtk_label_set_markup
+}
+
+{
+   <foobar>
+   Memcheck:Leak
+   ...
+   fun:XInitExtension
+}
+
+{
+   <foobar>
+   Memcheck:Leak
+   fun:malloc
+   fun:realloc
+   fun:g_realloc
+   obj:/usr/lib/libgobject-2.0.so*
+   fun:g_type_register_static
+   fun:g_gtype_get_type
+}
+
+{
+   <foobar>
+   Memcheck:Leak
+   ...
+   obj:/usr/lib/libfreetype.so*
+}
+
+{
+   <foobar>
+   Memcheck:Leak
+   ...
+   fun:gtk_widget_set_name
+}
+
+{
+   <foobar>
+   Memcheck:Leak
+   ...
+   obj:/usr/lib/libgobject-2.0.so*
+   fun:g_type_register_fundamental
+}
+
+{
+   <foobar>
+   Memcheck:Leak
+   fun:calloc
+   fun:g_malloc0
+   obj:/usr/lib/libgobject-2.0.so*
+   fun:g_type_register_static
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:pango_shape
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:g_type_module_use
+   ...
+   fun:gtk_im_context_get_preedit_string
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gtk_module_init
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   obj:/usr/lib/libfontconfig.so*
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gtk_text_layout_draw
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:g_type_add_interface_static
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:g_malloc
+   fun:g_memdup
+   obj:/usr/lib/libgobject-2.0.so*
+   fun:g_type_class_ref
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:g_malloc0
+   fun:g_type_class_ref
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:g_type_create_instance
+   obj:/usr/lib/libgobject-2.0.so*
+   fun:g_object_newv
+   fun:g_object_new
+   obj:/usr/lib/libgtk-x11-2.0.so*
+   fun:gtk_main_do_event
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gtk_widget_get_pango_context
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gdk_pre_parse_libgtk_only
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gtk_tool_button_set_label
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:g_object_class_install_property
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gtk_spin_button_get_type
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:getpwnam_r@@*
+   obj:/lib/libglib-2.0.so*
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gdk_window_process_updates
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:realloc
+   fun:g_realloc
+   obj:/usr/lib/libgobject-2.0*
+   fun:g_type_register_static
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:pango_layout_get_unknown_glyphs_count
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:g_malloc
+   fun:g_slice_alloc
+   obj:/usr/lib/libgobject-2.0.so*
+   obj:/usr/lib/libgobject-2.0.so*
+   fun:g_type_register_static
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr1
+   fun:g_utf8_pointer_to_offset
+   fun:g_utf8_pointer_to_offset
+   fun:regex_fetch_pos
+   fun:apply_sub_patterns
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:_XEnq
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XReadEvents
+   fun:XIfEvent
+   fun:gdk_x11_get_server_time
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gtk_rc_parse_string
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gtk_rc_get_style
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   ...
+   fun:gdk_window_focus
+}
